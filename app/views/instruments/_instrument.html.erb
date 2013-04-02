@@ -1,0 +1,39 @@
+<div class="box">
+	<%= instrument.name %>
+	<%= link_to (image_tag instrument.image), instrument %>
+	<p class="description">
+		<%= instrument.description %>
+	</p>
+	<p>
+		<strong>
+			 <%= link_to instrument.user.name,  user_path(instrument.user) %>
+		</strong>
+	</p>
+	  
+	<% if current_user == instrument.user %>
+		<p>
+		<%= link_to 'Edit', edit_instrument_path(instrument) %>
+		<%= link_to 'Destroy', instrument, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+	<% end %>
+</div>
+
+
+
+
+
+
+
+
+<!-- Temporary moved down to try out jquery masonry
+<tr>
+  <td><%#= image_tag instrument.image %></td>
+  <td><%#= instrument.description %></td>
+  <td><%#= link_to 'Show', instrument %></td>
+  
+  <%# if current_user == instrument.user %>
+	  <td><%#= link_to 'Edit', edit_instrument_path(instrument) %></td>
+	  <td><%#= link_to 'Destroy', instrument, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <%# end %>
+</tr>
+-->

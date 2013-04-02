@@ -1,0 +1,50 @@
+<div class="well">
+  <%= form_tag instruments_path, :method => :get do %>
+  <p>
+    <h1>Let's Get Started!</h1>
+    <h4>The Andante community is chock full of instruments of every type. No matter what you are tryin to pick up, chances are, we got you covered.<h4>
+    <%= text_field_tag :search, params[:search], {placeholder: "Let's play something!", class: 'input-medium search-query'} %>
+    <%= submit_tag "Search", :name=> nil, class: "btn btn-primary" %>
+  </p>
+  <% end %>
+</div> 
+
+<div id="instruments">
+  <%= render @instruments %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+ Temporary moved down to try out jquery masonry
+
+<h1>Listing instruments</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <%#= render @instruments %>   
+  </tbody>
+</table>
+
+<br />
+
+<%#= link_to 'New Instrument', new_instrument_path %>
+-->

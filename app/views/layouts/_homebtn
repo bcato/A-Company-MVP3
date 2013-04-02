@@ -1,0 +1,7 @@
+
+<% if user_signed_in? %>
+	<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
+<% else %>
+	<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
+	
+<% end %>
