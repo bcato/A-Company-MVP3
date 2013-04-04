@@ -86,9 +86,16 @@ body {
 	width: 214px;
 }
 
+.box .name {
+  text-align: left;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 .box img {
 	display: block;
 	width: 100%;
+  margin-top: 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -98,13 +105,14 @@ body {
 	margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 0px;
+  font-size: 14px;
 }
 
  /* Carousel base class */
 
 .carousel {
-  	margin-left: -20px;
-    margin-right: -20px;
+  	margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 60px;
 }
 
@@ -126,13 +134,14 @@ body {
 
 .carousel .item {
  	height: 500px;
+  width: 100%;
 }
 
 .carousel img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: auto;
+	width: 100%;
 	height: 500px;
 }
 
@@ -141,12 +150,20 @@ body {
 	position: static;
 	max-width: 700px;
 	padding: 0 20px;
-	margin-top: 200px;
+	margin-top: 170px;
+  margin-bottom: 10px;
 }
 
-.carousel-caption h1,
+.carousel-caption h1 {
+  margin: 5px;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
 .carousel-caption .lead {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   line-height: 1.25;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
@@ -156,23 +173,11 @@ body {
   margin-top: 0px;
 }
 
-.carousel-caption .btn-primary {
-  position: center;
-  margin-top: 50px;
-}
-
  /* RESPONSIVE CSS */
 
 @media (max-width: 979px) {
 
-	.container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
-      }
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
-      }
+	
 
       .carousel .item {
         height: 500px;
@@ -186,10 +191,7 @@ body {
 
 @media (max-width: 767px) {
 
-      .navbar-inner {
-        margin: -20px;
-      }
-
+     
       .carousel {
         margin-left: -20px;
         margin-right: -20px;
@@ -226,12 +228,14 @@ body {
 }
 
 .thumbnails {
- text-align:left; 
+ margin-top: 50px;
+ text-align: center;
 }
 
-.thumbnails > li > a { 
-  display: inline-block; 
-  float: left; 
+.thumbnails p {
+ text-align: center;
+ margin-left: 50px;
+ width: 200px;
 }
 
 .thumbnail, .thumbnail:hover { 
@@ -239,6 +243,11 @@ body {
   -moz-box-shadow: none; 
   box-shadow: none; 
   border: none; 
+}
+
+.homebutton {
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .content{
@@ -256,4 +265,12 @@ body {
 
 .user .photo{
   height: 200px;
+}
+
+.well h4 {
+  margin-bottom: 20px;
+}
+
+#instruments {
+  margin-top: 50px;
 }
