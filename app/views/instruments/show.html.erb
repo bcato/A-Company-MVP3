@@ -21,7 +21,9 @@
 				</p>
 				<%= link_to 'Nope', edit_instrument_path(@instrument), class: "btn btn-primary" %> |
 			<% end %>
-			<%= link_to 'Back to instruments', instruments_path, class: "btn btn-primary" %>
+			<p>Like what you See?</p>
+			<%= link_to 'Rent this Instrument', reservation_instrument_path, class: "btn btn-primary" %>
+			<%= link_to 'Back to instruments', instrument_path, class: "btn btn-primary" %>
 		</div>
 		</div>
 		<div class="span4 offset">

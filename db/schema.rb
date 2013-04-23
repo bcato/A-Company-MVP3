@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402034742) do
+ActiveRecord::Schema.define(:version => 20130409061608) do
 
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -42,9 +42,22 @@ ActiveRecord::Schema.define(:version => 20130402034742) do
     t.datetime "image_updated_at"
     t.string   "name"
     t.string   "category"
+    t.string   "state"
+    t.integer  "renter_id"
   end
 
   add_index "instruments", ["user_id"], :name => "index_instruments_on_user_id"
+
+  create_table "rentships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "renter_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "state"
+  end
+
+  add_index "rentships", ["state"], :name => "index_rentships_on_state"
+  add_index "rentships", ["user_id", "renter_id"], :name => "index_rentships_on_user_id_and_renter_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

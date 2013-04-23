@@ -14,6 +14,15 @@ class User < ActiveRecord::Base
               size: { less_than: 5.megabytes }
 
   has_many :instruments
+  has_many :renters, through: :rentships,
+                      conditions: { rentships: {state: 'accepted'} }
+
+  has_many :pending_rentships, class_name: 'Rentships',
+                                 foreign_key: :user_id,
+                                 conditions: { rentships: { state: 'pending' } }
+
+  has_many :pending_renters, through: :pending_rentships, source: :renter
+
   has_attached_file :avatar, 
                     :styles => { :small => '30x30#', :large => '100x100#' },
                     :default_url => "/images/missing.png"
