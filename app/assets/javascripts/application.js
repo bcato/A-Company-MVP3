@@ -17,6 +17,3 @@
 //= require bootstrap
 //= require bootstrap-alert
 //= require_tree .
-
-jQuery -> 
-	$('.dropdown-toggle').dropdown()
