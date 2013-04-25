@@ -4,13 +4,14 @@ class InstrumentsController < ApplicationController
   # GET /instruments
   # GET /instruments.json
   def index
-    @search = Instrument.search do
-      fulltext params[:search]
-    end
-    @instruments = @search.results
+    #@search = Instrument.search do
+      #fulltext params[:search]
+    #end
+    #@instruments = @search.results
     
-
-    respond_to do |format|
+      @instruments = Instrument.order("created_at desc")
+      
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @instruments }
     end
