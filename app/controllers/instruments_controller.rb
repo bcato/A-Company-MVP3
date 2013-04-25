@@ -95,4 +95,10 @@ class InstrumentsController < ApplicationController
       format.json { render json: @instrument }    
     end
   end
+
+  def request
+    @instrument = current_user.instruments.find(params[:id]).request!
+    redirect_to instruments_path, notice: "Instrument was requested!"
+  end
+
 end

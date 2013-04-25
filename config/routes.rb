@@ -1,6 +1,9 @@
 ClistApp::Application.routes.draw do
   resources :instruments do
     get 'reservation', :on => :member
+      member do
+        post :request
+      end
   end
 
   devise_for :users
@@ -8,7 +11,7 @@ ClistApp::Application.routes.draw do
 
   resources :rentships
 
- # devise_for :installs
+  devise_for :installs
 
 get 'about' => 'pages#about'
 get 'team' => 'pages#team'

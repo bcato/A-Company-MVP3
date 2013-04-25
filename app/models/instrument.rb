@@ -19,7 +19,7 @@ class Instrument < ActiveRecord::Base
     text :description, :name, :category
   end
 
-  state_machine :initial => :available do
+  state_machine :state, :initial => :available do
     
     event :request do
       transition :available => :requested
