@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
   	instruments_path
   end
 
+  def after_edit_path_for(resource)
+  	user_path(current_user)
+  end
+
+
 end

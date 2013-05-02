@@ -7,11 +7,15 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar
-  # attr_accessible :title, :body
+  attr_accessible :title, :body
 
-  validates_attachment :avatar, presence: true,
+  validates_attachment :avatar,
               content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
               size: { less_than: 5.megabytes }
+
+  has_attached_file :avatar, 
+                    #:styles => { :small => '30x30#', :large => '100x100#' },
+                    :default_url => '/assets/images/missing.png'
 
   has_many :instruments
   has_many :renters, through: :rentships,
@@ -23,7 +27,5 @@ class User < ActiveRecord::Base
 
   has_many :pending_renters, through: :pending_rentships, source: :renter
 
-  has_attached_file :avatar, 
-                    :styles => { :small => '30x30#', :large => '100x100#' },
-                    :default_url => "/images/missing.png"
+  
 end

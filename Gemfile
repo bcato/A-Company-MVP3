@@ -9,6 +9,8 @@ gem 'aws-sdk'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'state_machine'
+gem 'faker'
+gem 'jquery-ui-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -30,7 +32,9 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  
 end
+
 
 
 # To use ActiveModel has_secure_password

@@ -15,7 +15,7 @@
 	<% if current_user == instrument.user %>
 		<p>
 		<%= link_to 'Edit', edit_instrument_path(instrument) %>
-		<%= link_to 'Destroy', instrument, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<%= link_to 'Remove', instrument, method: :delete, data: { confirm: 'Are you sure?' } %>
 		</p>
 	<% end %>
 </div>
