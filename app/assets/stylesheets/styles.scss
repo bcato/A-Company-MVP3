@@ -1,6 +1,7 @@
-/*change font here
-/*$baseFontFamily: Oxygen; 
-@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
+/*change font here*/
+$baseFontFamily: Lato, sans-serif; 
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Poly);
 
 $btnPrimaryBackground: green;
 $navbarBackgroundHighlight: white;
@@ -9,52 +10,111 @@ $navbarBackground: white;
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
+/* other Less styles */
+
+
 /* GLOBAL STYLES */
 
 body {
       margin-top: 100px;
       padding-bottom: 40px;
       color: #5a5a5a;
+      background-color: #F1F1F1;
     }
 
+h1 {
+  font-family: 'Poly', serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 95%
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.container {
+  left: 0;
+  right: 0;
+}
+
+.btn {
+  border: none;
+  background: #34495e;
+  color: white;
+  font-size: 16.5px;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-backface-visibility: hidden; }
 
 /* CUSTOMIZE THE NAVBAR */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-   
+
 .navbar-wrapper {
+  background-color: #77E0DB;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9;
-  margin-top: 20px;
-  margin-bottom: 90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  z-index: 0;
+  padding-top: 20px; 
+  padding-bottom: 10px;
+  padding-right: 200px;
+  margin-right: -50px;
+  margin-top: 0px;
+  margin-bottom: 0px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
 }
 
 
+.nav-collapse {
+  background-color: #77E0DB
+}
+
 /* Remove border and change up box shadow for more contrast */
-.navbar .navbar-inner {
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 100px;
-  border: 0;
-  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-          box-shadow: 0 2px 10px rgba(0,0,0,.25);
+
+
+.navbar {
+  background-color: #77E0DB;
 }
 
 /* Downsize the brand/project name a bit */
 .navbar .brand {
   padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+  margin-left: 20px;
   font-size: 16px;
-  font-weight: bold;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  text-shadow: none !important;
 }
 
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
   padding: 15px 20px;
+  margin-top: 70px;
+  color: #1C1C1C;
+  text-shadow: none !important;
+  font-family: 'Poly', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+  font-style: bold;
 }
 
 /* Offset the responsive button for proper vertical alignment */
@@ -62,14 +122,187 @@ body {
   margin-top: 10px;
 }
 
+/* Home page images */
 
-.footer {
-	
-	margin-top: 200px;
-	color: $grayLight;
-	a {
-		color: $gray;	
-	}
+.home {
+  margin-top: -50px;
+}
+
+#imgcontainer1 {
+  background: url(guitar-bg.jpg);
+  background-size: 100% 100%;
+  height: 700px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 70px;
+  margin-bottom: 500px;
+  margin-right: -50px;
+  z-index: 100;
+}
+
+.homeimage1-text {
+  z-index: 100;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 300px;
+}
+
+.homeimage1-text h1 {
+  color: #1C1C1C;
+  padding-top: 120px;
+  padding-left: 20px;
+  width: 500px;
+  margin-bottom: 10px; 
+  font-family: 'Poly', serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 95%
+}
+
+.homeimage1-text h2 {
+  color: #FFF; 
+  padding-left: 20px;
+  width: 500px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%
+}
+
+.homeimage1-text p {
+  color: #1C1C1C; 
+  padding-left: 20px;
+  width: 400px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+}
+
+#imgcontainer1 .btn {
+  z-index: 100;
+  background-color: #77E0DB;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+  line-height: 40px;
+}
+
+#imgcontainer2 {
+  background: url(piano-bg.jpg);
+  background-size: 100% 100%;
+  height: 700px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 1450px;
+  margin-bottom: 0px;
+  margin-right: -50px;
+  z-index: 100;
+}
+
+.homeimage2-text {
+  z-index: 100;
+  text-align: left;
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 100px;
+  width: 350px;
+}
+
+.homeimage2-text h1 {
+  color: #1C1C1C; 
+  font-family: 'Poly', serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 95%
+}
+
+.homeimage2-text h2 {
+  color: #1C1C1C;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110% 
+}
+
+.homeimage2-text p {
+  color: #1C1C1C;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%; 
+}
+
+#imgcontainer2 .btn {
+  z-index: 100;
+  background-color: #77E0DB;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+  line-height: 40px;
+}
+
+.instructable {
+  margin-top: 770px;
+  margin-right: -50px;
+  padding-top: 50px;
+  padding-left: 30px;
+  height: 650px;
+  background-color: #77E0DB;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.instructable .btn {
+  background-color: #38362E;
+  width: 250px;
+  margin-top: 0px;
+  margin-left: -100px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+  line-height: 40px;
+}
+
+.instructable h1 {
+  padding-left: 200px;
+  margin-bottom: 50px;
+  color: black;
+  font-family: 'Poly', sans-serif;
+  font-weight: 400;
+  font-size: 180%;
+  font-style: italic;
+}
+
+.instructable h2 {
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%
+}
+
+.instructable .span4 {
+  margin-right: 0px;
+}
+
+.instructable p {
+  color: black;
+  width: 300px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
 }
 
 /* Required for jQuery Masonry */
@@ -109,160 +342,14 @@ body {
   font-size: 14px;
 }
 
- /* Carousel base class */
 
-.container {
-  width: 100%;
-  min-width: 1000px;
-}
 
-.carousel {
-  	margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 60px;
-}
-
-.carousel .container {
-	position: relative;
-  margin-left: 50px;
-	z-index: 9;
-}
-
-.carousel-control {
-	height: 80px;
-	margin-top: 0;
-  margin-right: 40px;
-	font-size: 120px;
-	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-	background-color: transparent;
-	border: 0;
-	z-index: 10;
-}
-
-.carousel .item {
- 	height: 500px;
-  width: 100%;
-  min-width: 1000px;
-}
-
-.carousel img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-  min-width: 1000px;
-	height: 500px;
-}
-
-.carousel-caption {
-	background-color: transparent;
-	position: static;
-	max-width: 700px;
-	padding: 0 20px;
-	margin-top: 170px;
-  margin-bottom: 10px;
-}
-
-.carousel-caption h1 {
-  margin: 5px;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-}
-
-.carousel-caption .lead {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-}
-
-.carousel-caption .btn {
-  margin-top: 0px;
-}
-
- /* RESPONSIVE CSS */
-
-@media (max-width: 979px) {
-
-	
-
-      .carousel .item {
-        height: 500px;
-      }
-      .carousel img {
-        width: auto;
-        height: 500px;
-      }
-	
-}
-
-@media (max-width: 767px) {
-
-     
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
-
-      }
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 18px;
-      }
-}
-
- /* For Footer */
+ 
 
 .links li {
   display: inline;
   margin-right: 5px;
   margin-left: 5px;
-}
-
-.thumbnails {
- margin-top: 50px;
- margin-left: 50px;
- margin-bottom: 50px;
- text-align: center;
-}
-
-.thumbnails .span3 {
- background-color: #eee;
- margin-left: 40px;
- margin-right: 40px;
-}
-
-.thumbnails p {
- text-align: center;
- width: 200px;
-}
-
-.thumbnail {
-  margin-top: 15px;
-}
-
-.thumbnail, .thumbnail:hover { 
-  -webkit-box-shadow: none; 
-  -moz-box-shadow: none; 
-  box-shadow: none; 
-  border: none; 
 }
 
 .homebutton {
@@ -294,3 +381,296 @@ body {
 #instruments {
   margin-top: 50px;
 }
+
+
+
+/* For Footer */
+
+#footer-frame {
+  background-color: #38362E;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  margin-top: 2100px;
+  margin-bottom: -40px;
+  margin-right: -50px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.site-links h6 {
+  color: #77E0DB;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.site-links ul, li {
+  color: white;
+  list-style: none;
+  list-style-type: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.site-links p {
+  color: #FFF;
+  width: 200px;
+  margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.footer small {
+  margin-top: 100px;
+}
+
+
+/* Sign Up page styling */
+
+#SignUp-box {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+} 
+
+#SignUp-box .well {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+} 
+
+#SignUp-box h1 {
+  color: #1C1C1C;
+}
+
+#SignUp-box h3 {
+  color: #77E0DB;
+}
+
+#SignUp-box li {
+  color: #1C1C1C;
+}
+
+#SignUp-box input {
+  border-radius: 0px;
+  height: 30px;
+  width: 170px; 
+  border-radius: 0px;
+}
+
+#SignUp-box .btn {
+  background-color: #77E0DB;
+  color: #FFF;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.indexbox {
+  padding-top: 150px;
+}
+
+#aboutbox {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+} 
+
+#aboutbox h2 {
+  margin-bottom: 50px;
+}
+
+#showbox {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+}
+
+
+/* trying to figure out "choose file button"
+input[type="button"]{
+    border-radius: 0;
+    color: #77E0DB;
+    height: 50px;
+    width: 150px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+ /* Carousel base class */
+
+/*.container {
+  width: 100%;
+  min-width: 1000px;
+}
+
+.carousel {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+}
+
+.carousel .container {
+  position: relative;
+  margin-left: 50px;
+  z-index: 9;
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  margin-right: 40px;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+  z-index: 10;
+}
+
+.carousel .item {
+  height: 500px;
+  width: 100%;
+  min-width: 1000px;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1000px;
+  height: 500px;
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 700px;
+  padding: 0 20px;
+  margin-top: 170px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption h1 {
+  margin: 5px;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+.carousel-caption .lead {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+.carousel-caption .btn {
+  margin-top: 0px;
+
+  /* RESPONSIVE CSS
+
+@media (max-width: 979px) {
+
+  
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+  
+}
+
+@media (max-width: 767px) {
+
+     
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+}
+ */
+
+ /*
+
+ .thumbnails {
+ background-color: #77E0DB;
+ margin-top: 50px;
+ margin-left: 50px;
+ margin-bottom: 50px;
+ text-align: center;
+}
+
+.thumbnails .span3 {
+ background-color: #77E0DB;
+ margin-left: 40px;
+ margin-right: 40px;
+}
+
+.thumbnails p {
+ text-align: left;
+ width: 200px;
+ margin-left: 50px;
+}
+
+.thumbnail {
+  margin-top: 15px;
+}
+
+.thumbnail h2, p {
+  color: #1C1C1C;
+}
+.thumbnail, .thumbnail:hover { 
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none; 
+  box-shadow: none; 
+  border: none; 
+} */
+

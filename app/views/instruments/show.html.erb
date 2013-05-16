@@ -1,39 +1,39 @@
-<div class="row">
-	<div class="span6 offset2">
-				<%= image_tag @instrument.image %>
-		<h2>
-			<%= @instrument.name %>
-		</h2>
-		<h4>
-		  	<%= @instrument.user.name %>
-		</h4>
-			<strong>
-				All the deets: </br>
-			</strong>
-			<p>
-		  		<%= @instrument.description %>
-			</p>
-		<hr/>
-		<div class:"well">
+<div id="SignUp-box">
+	<div class="row">
+		<div class="span6 offset2">
+					<%= image_tag @instrument.image %>
+			<h2>
+				<%= @instrument.name %>
+			</h2>
+			<h4>
+			  	<%= @instrument.user.first_name %>
+			</h4>
+				<strong>
+					All the deets: </br>
+				</strong>
+				<p>
+			  		<%= @instrument.description %>
+				</p>
+			<hr/>
 			<% if current_user == @instrument.user %>
 				<p>
 					Happy with it? 
 				</p>
-				<%= link_to 'Nope', edit_instrument_path(@instrument), class: "btn btn-primary" %> |
-			<% end %>
+				<%= link_to 'Nope', edit_instrument_path(@instrument), class: "btn btn-primary" %> 
+			<% else %>
 			<p>Like what you See?</p>
 			<%= link_to 'Rent this Instrument', reservation_instrument_path, class: "btn btn-primary" %>
 			<%= link_to 'Back to instruments', instrument_path, class: "btn btn-primary" %>
+			<% end %>
 		</div>
-		</div>
-		<div class="span4 offset">
-			<div class="hero-unit">
-				<h3>
-					[Placeholder: This is where all the pricing details will go - TBD]
-				</h3>
+			<div class="span4 offset">
+				<div class="hero-unit">
+					<h3>
+						[Placeholder: This is where all the pricing details will go - TBD]
+					</h3>
+				</div>
 			</div>
-		</div>
 	</div>
-	
+</div>	
 
 

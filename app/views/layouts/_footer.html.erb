@@ -1,10 +1,94 @@
- <div class="footer">
-	<small>
-		<ul class="links">
-			<li>&copy;2013 Andante</li>
-			<li><%= link_to "About Us", about_path %></li>
-			<li><%= link_to "Team", team_path %></li>
-		</ul>
-		<%= link_to "Beta:Full Site Coming Soon!", "http://andante.cc" %> Created by the Andante Team - San Francisco, CA
-	</small>
+ <div id="footer-frame">
+	 <div class="footer">
+	 	<div class="row-fluid">
+		 	<div class="site-links">
+		 		<div class="span3">
+		 			<%=image_tag 'come-in-sign.png' %>
+		 			<p>
+		 				Are you a Mom & Pop Shop? We'd love to do business with you! Call us today.
+		 			</p>
+		 		</div>
+		 		<div style="width:1px;height:150px;background-color:white;float:left;z-index:100;"></div>
+		 		<div class="span2">
+			 		<ul>
+			 			<li>
+			 				<h6>General</h6>
+			 			</li>
+			 			<li>
+			 				<%= link_to "ABOUT US", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "TEAM", team_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "JOBS", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "FAQ", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "CONTACT", about_path %>
+			 			</li>
+			 		</ul>
+		 		</div>
+		 		<div class="span2">
+			 		<ul>
+			 			<li>
+			 				<h6>Loaning + Borrowing</h6>
+			 			</li>
+			 			<li>
+			 				<%= link_to "WHY ANDANTE", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "HOW IT WORKS", team_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "LIST YOUR INSTRUMENT", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "SIGN UP", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "SAFETY", about_path %>
+			 			</li>
+			 		</ul>
+		 		</div>
+		 		<div class="span2">
+			 		<ul>
+			 			<li>
+			 				<h6>Partnerships</h6>
+			 			</li>
+			 			<li>
+			 				<%= link_to "BRANDS", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "MOM + POP SHOPS", team_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "SCHOOLS", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "OPPORTUNITIES", about_path %>
+			 			</li>
+			 		</ul>
+			 	</div>
+			 	<div class="span2">
+			 		<ul>
+			 			<li>
+			 				<h6>Help</h6>
+			 			</li>
+			 			<li>
+			 				<%= link_to "CUSTOMER SUPPORT", about_path %>
+			 			</li>
+			 			<li>
+			 				<%= link_to "POLICIES", team_path %>
+			 			</li>
+			 		</ul>
+			 	</div>
+		 	</div>
+		 </div>
+		<small>
+			<%= link_to "Beta:Full Site Coming Soon!", "http://andante.cc" %> </br> MADE WITH <i class='icon-heart'></i> IN SAN FRANCISCO   &copy; ANDANTE INC., ALL RIGHTS RESERVED
+		</small>
+	</div>
 </div>

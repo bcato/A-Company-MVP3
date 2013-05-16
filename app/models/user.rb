@@ -5,9 +5,17 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+ def fullname
+  self.fullname = self.first_name + "" + self.last_name
+end
+
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :fullname, :avatar
   attr_accessible :title, :body
+
+  
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
   validates_attachment :avatar,
               content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },

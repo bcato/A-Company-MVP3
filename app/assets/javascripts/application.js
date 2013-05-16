@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.ui.datepicker
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require jquery.masonry.min.js
 //= require bootstrap-dropdown.js
 //= require bootstrap

@@ -1,16 +1,16 @@
- <%= simple_form_for(@instrument, html: {class: "form-horizontal"}) do |f| %>
-  <%= f.error_notification %>
-  <%= f.full_error :image_file_size, class: "alert alert-error" %>
-  <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-  <%= f.input :image, label: "Upload an image" %>
-  <%= f.input :name, label: "What is your instrument's name?" %>
-  <%= f.input :category, label: "What kind of instrument is it?" %>
-  <%= f.input :description, as: :text, input_html: { rows: "3"} %>
-  <div class="form-actions">
+   <%= simple_form_for(@instrument, html: {class: "form-vertical"}) do |f| %>
+    <%= f.error_notification %>
+    <%= f.full_error :image_file_size, class: "alert alert-error" %>
+    <%= f.full_error :image_content_type, class: "alert alert-error" %>
+
+    <%= f.input :name, label: "What is your instrument's name?", :input_html => {:style=> 'width: 20.000em'} %>
+    <%= f.input :category, label: "What kind of instrument is it?", :input_html => {:style=> 'width: 20.000em'} %>
+    <%= f.input :description, as: :text, input_html: { rows: "3", style: 'width: 20.000em'} %>
+    <%= f.input :image, :hint => "current image: #{f.template.image_tag(f.object.image.url(:thumb))}" %>
     <%= f.button :submit, class: "btn btn-primary" %>
-  </div>
-<% end %>
+    
+  <% end %>
 
 
 <!-- kept in case I need to have a collection in a future form

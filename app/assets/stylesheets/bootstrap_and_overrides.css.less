@@ -1,0 +1,66 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+@import "twitter/bootstrap/variables.less";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled bootstrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot?v=3.0.2");
+@fontAwesomeEotPath_iefix: asset-path("fontawesome-webfont.eot?#iefix&v=3.0.2");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff?v=3.0.2");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf?v=3.0.2");
+
+// Font Awesome
+@import "fontawesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+@navbarHeight: 50px;
+@navbarBackground: #77E0DB;
+@navbarBackgroundHighlight: #77E0DB;
+@baseFontFamily: 'Lato', sans-serif;
+
+body {
+	font-family: @baseFontFamily;
+}
+
+.navbar-wrapper .container {
+  background-color: @navbarBackground;	
+}
+
+.navbar {
+  background-color: @navbarBackground;	
+}
+
+.navbar .nav {
+  height: @navbarHeight;
+  background: @navbarBackground;
+}
+
+.navbar .brand {
+  background: @navbarBackground;	
+}
+
+.navbar-inner {
+	background-color: @navbarBackground;	
+}
+
+
+
+
