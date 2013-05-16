@@ -6,6 +6,7 @@ Instrument pics/drum set.jpeg: Instrument pics/drum set-14128d9484a3b33e9a845683
 Instrument pics/french_horn.jpeg: Instrument pics/french_horn-935fd5806a5f3ed040115022f7d5b3fd.jpeg
 Instrument pics/violin.jpeg: Instrument pics/violin-a4e8e6c548257e830a0a66b710821d76.jpeg
 Instrument pics/xylophone.jpeg: Instrument pics/xylophone-51ee1012cfd671360af98102e01836c2.jpeg
+Logos/andante-logo.png: Logos/andante-logo-fccdc089a7bfdd885a9c46d0860105d9.png
 Logos/guitar_logo.png: Logos/guitar_logo-bb9b852f79aa6a29b7df680d84502861.png
 Logos/keyboard_logo.png: Logos/keyboard_logo-d26a6a850c8e4d30f66831f9ab17753d.png
 Logos/trumpet_logo.png: Logos/trumpet_logo-7a74488412ff6f51103691722fbe9861.png
@@ -14,14 +15,39 @@ Team Pics/Brandon.png: Team Pics/Brandon-760f65d6ce47e07d2baf79b1b65ef88e.png
 Team Pics/David.png: Team Pics/David-ef6eb293f3b1cd3b1a72a3c4fde3ca19.png
 Team Pics/Jeff.png: Team Pics/Jeff-f5466dfc33d05a63c090e0623c6d9eb3.png
 Team Pics/Ron.png: Team Pics/Ron-fe71c47243b2ff53d98d59013a6e398f.png
+come-in-sign.png: come-in-sign-497c3bb8223091b69a5442b064653055.png
+guitar-bg.jpg: guitar-bg-c50b3ffa40594ab664d86b81e4b31297.jpg
+instruct-1.png: instruct-1-e87e9405eb72a771ba8f0a96219d1020.png
+instruct-2.png: instruct-2-3ca7c154d4f6fed5359f20a0343fb9c4.png
+instruct-3.png: instruct-3-b28d120d908d61718c7b97bb6cd48ed3.png
 missing.jpeg: missing-a72200e58bd7944b3f115f9395e1546d.jpeg
 missing.png: missing-7c28eb70c797dbc91e3de322fc8b711a.png
+piano-bg.jpg: piano-bg-e7e24c34c8eff80dc1e1a80a3c1899fc.jpg
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 slide-01.jpg: slide-01-bc0d59cd11b09de734e2fb2a5eeefedb.jpg
 slide-02.jpg: slide-02-ee0ed2f7a57355796f16def4dbb88c1d.jpg
 slide-03.jpg: slide-03-2145efca9cb7bf9544c7d3c7fa412e11.jpg
-application.js: application-a7a9dc33606c827e2f147fa6add39bfc.js
-application.css: application-2870c59a037882f0966bdc965a9c295b.css
+application.js: application-47d40dd0f0310a6c8d6a2f7fae4c877d.js
+application.css: application-3f455242d36de105b05cdf2da8a8c1ed.css
+fontawesome-webfont.eot: fontawesome-webfont-77e1d850f2d1e5ac753cdf3454949543.eot
+fontawesome-webfont.ttf: fontawesome-webfont-bfb261547b1311ffef80aa06ba5cddfc.ttf
+fontawesome-webfont.woff: fontawesome-webfont-ee254ab81e26c3eb79566a682d48a252.woff
+twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
+twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-ab3144065a860d198f1d7d9a4882640c.png
 glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
 glyphicons-halflings.png: glyphicons-halflings-ab3144065a860d198f1d7d9a4882640c.png
+jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-691b2d4343303de8d214ad5395fd895d.gif
+jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png
+jquery-ui/ui-bg_flat_75_ffffff_40x100.png: jquery-ui/ui-bg_flat_75_ffffff_40x100-841636c8f8d33987bb8d2f31e8ef92ca.png
+jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png: jquery-ui/ui-bg_glass_55_fbf9ee_1x400-bbb04adbe79f471d8c88a2bc691231b6.png
+jquery-ui/ui-bg_glass_65_ffffff_1x400.png: jquery-ui/ui-bg_glass_65_ffffff_1x400-a30aa544902182c133dbb46ac40a08d2.png
+jquery-ui/ui-bg_glass_75_dadada_1x400.png: jquery-ui/ui-bg_glass_75_dadada_1x400-38ed9f33e066d6bee977c567d4b03650.png
+jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png: jquery-ui/ui-bg_glass_75_e6e6e6_1x400-3e20bce1b7b2f5dd47ca6ac361805162.png
+jquery-ui/ui-bg_glass_95_fef1ec_1x400.png: jquery-ui/ui-bg_glass_95_fef1ec_1x400-c723e9a2b50006c6054836a10b76bb84.png
+jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100.png: jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100-081f36ef02c9233c6db45d2d566fbecd.png
+jquery-ui/ui-icons_222222_256x240.png: jquery-ui/ui-icons_222222_256x240-1bca65a97a49d7d05ab2f3dc83b97cd5.png
+jquery-ui/ui-icons_2e83ff_256x240.png: jquery-ui/ui-icons_2e83ff_256x240-efb394f4417cc6bd4177a1999474e1eb.png
+jquery-ui/ui-icons_454545_256x240.png: jquery-ui/ui-icons_454545_256x240-17e6740beb176dd87da44be76c94bb47.png
+jquery-ui/ui-icons_888888_256x240.png: jquery-ui/ui-icons_888888_256x240-5b928d6b862809eb8130d7b7e0b51a1d.png
+jquery-ui/ui-icons_cd0a0a_256x240.png: jquery-ui/ui-icons_cd0a0a_256x240-635d34cf8bf22d711a729017ab9aaebe.png
 jquery.min.map: jquery.min-0633f0a59e3d0cd55ac3518f228b2893.map
