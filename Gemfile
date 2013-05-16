@@ -29,6 +29,7 @@ gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'therubyracer', :platforms => :ruby, :require => 'v8'
 gem 'libv8', '3.11.8.17'
 gem 'less-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 
 # Gems used only for assets and not required in production environments by default.
@@ -36,7 +37,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+  
   
 end
 

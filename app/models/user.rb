@@ -26,7 +26,7 @@ end
                     :default_url => '/assets/images/missing.png'
 
   has_many :instruments
-  has_many :renters 
+  has_many :renters, 
                       conditions: { rentships: {state: 'accepted'} }
 
   has_many :pending_rentships, class_name: 'Rentships',
