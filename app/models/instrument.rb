@@ -15,9 +15,6 @@ class Instrument < ActiveRecord::Base
   
   has_attached_file :image
 
-  searchable do
-    text :description, :name, :category
-  end
 
   state_machine :state, :initial => :available do
     

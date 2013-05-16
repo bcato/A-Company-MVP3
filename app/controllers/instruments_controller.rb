@@ -3,12 +3,7 @@ class InstrumentsController < ApplicationController
 
   # GET /instruments
   # GET /instruments.json
-  def index
-    #@search = Instrument.search do
-      #fulltext params[:search]
-    #end
-    #@instruments = @search.results
-    
+  def index    
       @instruments = Instrument.order("created_at desc")
       
       respond_to do |format|
