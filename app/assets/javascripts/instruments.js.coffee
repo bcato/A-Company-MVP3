@@ -28,3 +28,14 @@ jQuery ->
 	    numberOfMonths: 2
 	    onClose: (selectedDate) ->
 	      $("#from").datepicker "option", "maxDate", selectedDate
+
+	$ ->
+	  $("#slider-range-min").slider
+	    range: "min"
+	    value: 40
+	    min: 10
+	    max: 700
+	    slide: (event, ui) ->
+	      $("#amo	unt").val "$" + ui.value
+
+	  $("#amount").val "$" + $("#slider-range-min").slider("value")

@@ -1,8 +1,9 @@
 class Instrument < ActiveRecord::Base
-  attr_accessible :description, :image, :name, :category, :user_id, :renter_id, :state
+  attr_accessible :description, :image, :name, :category, :user_id, :renter_id, :state, :price
 
   validates :description, presence: true
   validates :name, presence: true
+  validates :price, presence: true
   validates :category, presence: true
   validates :user_id, presence: true
   validates_attachment :image, presence: true,

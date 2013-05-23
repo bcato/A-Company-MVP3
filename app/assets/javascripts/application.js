@@ -11,8 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery.ui.datepicker
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require jquery.ui.slider
 //= require twitter/bootstrap
 //= require jquery.masonry.min.js
 //= require bootstrap-dropdown.js

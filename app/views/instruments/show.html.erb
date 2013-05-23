@@ -1,7 +1,7 @@
 <div id="SignUp-box">
 	<div class="row">
 		<div class="span6 offset2">
-					<%= image_tag @instrument.image %>
+				<%= image_tag @instrument.image %>
 			<h2>
 				<%= @instrument.name %>
 			</h2>
@@ -30,7 +30,7 @@
 			<div class="span4 offset">
 				<div class="hero-unit">
 					<h3>
-						[Placeholder: This is where all the pricing details will go - TBD]
+						<%= @instrument.price %>
 					</h3>
 				</div>
 			</div>

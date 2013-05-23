@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514181934) do
+ActiveRecord::Schema.define(:version => 20130521220945) do
 
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130514181934) do
     t.string   "category"
     t.string   "state"
     t.integer  "renter_id"
+    t.integer  "price"
   end
 
   add_index "instruments", ["user_id"], :name => "index_instruments_on_user_id"
