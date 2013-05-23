@@ -81,7 +81,7 @@ p {
   padding-bottom: 10px;
   padding-right: 200px;
   margin-right: -50px;
-  margin-top: 0px;
+  margin-top: -40px;
   margin-bottom: 0px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
 }
 
@@ -507,6 +507,19 @@ p {
   padding-top: 100px;
   padding-bottom: 50px;
   background-color: #F1F1F1;
+}
+
+#editbox {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+}
+
+#editbox h1 {
+  margin-bottom: 20px;
 }
 
 
