@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.masonry.min.js
 //= require jquery.ui.datepicker
 //= require jquery.ui.slider
 //= require twitter/bootstrap
-//= require jquery.masonry.min.js
 //= require bootstrap-dropdown.js
 //= require bootstrap
 //= require bootstrap-alert

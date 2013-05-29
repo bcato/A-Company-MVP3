@@ -12,7 +12,7 @@ jQuery ->
 				
 				# set columnWidth a fraction of the container width
 				columnWidth: (containerWidth) ->
-	    			containerWidth / 4
+	    			containerWidth / 5
 
 	$ ->
 	  $("#from").datepicker
