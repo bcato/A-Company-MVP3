@@ -685,6 +685,84 @@
 	border-left-width: 1px;
 }
 /*!
+ * jQuery UI Slider 1.10.0
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+/*
+
+
+ */
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* For IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+/*!
  * Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
@@ -9034,6 +9112,9 @@ body {
 .navbar-inner {
   background-color: #77e0db;
 }
+alert {
+  margin-bottom: -80px;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -9044,6 +9125,7 @@ body {
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+
 
 
 
@@ -22625,6 +22707,11 @@ a.badge:hover {
 /* other Less styles */
 /* GLOBAL STYLES */
 /* line 19, ../../app/assets/stylesheets/styles.scss */
+.alert .alert-notice {
+  margin-top: 200px;
+}
+
+/* line 23, ../../app/assets/stylesheets/styles.scss */
 body {
   margin-top: 100px;
   padding-bottom: 40px;
@@ -22632,7 +22719,7 @@ body {
   background-color: #F1F1F1;
 }
 
-/* line 26, ../../app/assets/stylesheets/styles.scss */
+/* line 30, ../../app/assets/stylesheets/styles.scss */
 h1 {
   font-family: 'Poly', serif;
   font-weight: 400;
@@ -22640,7 +22727,7 @@ h1 {
   line-height: 95%;
 }
 
-/* line 33, ../../app/assets/stylesheets/styles.scss */
+/* line 37, ../../app/assets/stylesheets/styles.scss */
 h2 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -22648,20 +22735,20 @@ h2 {
   line-height: 110%;
 }
 
-/* line 40, ../../app/assets/stylesheets/styles.scss */
+/* line 44, ../../app/assets/stylesheets/styles.scss */
 p {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 100%;
 }
 
-/* line 46, ../../app/assets/stylesheets/styles.scss */
+/* line 50, ../../app/assets/stylesheets/styles.scss */
 .container {
   left: 0;
   right: 0;
 }
 
-/* line 51, ../../app/assets/stylesheets/styles.scss */
+/* line 55, ../../app/assets/stylesheets/styles.scss */
 .btn {
   border: none;
   background: #34495e;
@@ -22684,7 +22771,7 @@ p {
 
 /* CUSTOMIZE THE NAVBAR */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-/* line 74, ../../app/assets/stylesheets/styles.scss */
+/* line 78, ../../app/assets/stylesheets/styles.scss */
 .navbar-wrapper {
   background-color: #77E0DB;
   position: absolute;
@@ -22696,24 +22783,24 @@ p {
   padding-bottom: 10px;
   padding-right: 200px;
   margin-right: -50px;
-  margin-top: 0px;
+  margin-top: -40px;
   margin-bottom: 0px;
   /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
 }
 
-/* line 90, ../../app/assets/stylesheets/styles.scss */
+/* line 94, ../../app/assets/stylesheets/styles.scss */
 .nav-collapse {
   background-color: #77e0db;
 }
 
 /* Remove border and change up box shadow for more contrast */
-/* line 97, ../../app/assets/stylesheets/styles.scss */
+/* line 101, ../../app/assets/stylesheets/styles.scss */
 .navbar {
   background-color: #77E0DB;
 }
 
 /* Downsize the brand/project name a bit */
-/* line 102, ../../app/assets/stylesheets/styles.scss */
+/* line 106, ../../app/assets/stylesheets/styles.scss */
 .navbar .brand {
   padding: 14px 20px 16px;
   /* Increase vertical padding to match navbar links */
@@ -22723,7 +22810,7 @@ p {
 }
 
 /* Navbar links: increase padding for taller navbar */
-/* line 110, ../../app/assets/stylesheets/styles.scss */
+/* line 114, ../../app/assets/stylesheets/styles.scss */
 .navbar .nav > li > a {
   padding: 15px 20px;
   margin-top: 70px;
@@ -22736,18 +22823,18 @@ p {
 }
 
 /* Offset the responsive button for proper vertical alignment */
-/* line 122, ../../app/assets/stylesheets/styles.scss */
+/* line 126, ../../app/assets/stylesheets/styles.scss */
 .navbar .btn-navbar {
   margin-top: 10px;
 }
 
 /* Home page images */
-/* line 128, ../../app/assets/stylesheets/styles.scss */
+/* line 132, ../../app/assets/stylesheets/styles.scss */
 .home {
   margin-top: -50px;
 }
 
-/* line 132, ../../app/assets/stylesheets/styles.scss */
+/* line 136, ../../app/assets/stylesheets/styles.scss */
 #imgcontainer1 {
   background: url(guitar-bg.jpg);
   background-size: 100% 100%;
@@ -22755,13 +22842,13 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 500px;
   margin-right: -50px;
   z-index: 100;
 }
 
-/* line 145, ../../app/assets/stylesheets/styles.scss */
+/* line 149, ../../app/assets/stylesheets/styles.scss */
 .homeimage1-text {
   z-index: 100;
   position: absolute;
@@ -22770,7 +22857,7 @@ p {
   width: 300px;
 }
 
-/* line 153, ../../app/assets/stylesheets/styles.scss */
+/* line 157, ../../app/assets/stylesheets/styles.scss */
 .homeimage1-text h1 {
   color: #1C1C1C;
   padding-top: 120px;
@@ -22783,7 +22870,7 @@ p {
   line-height: 95%;
 }
 
-/* line 165, ../../app/assets/stylesheets/styles.scss */
+/* line 169, ../../app/assets/stylesheets/styles.scss */
 .homeimage1-text h2 {
   color: #FFF;
   padding-left: 20px;
@@ -22794,7 +22881,7 @@ p {
   line-height: 110%;
 }
 
-/* line 175, ../../app/assets/stylesheets/styles.scss */
+/* line 179, ../../app/assets/stylesheets/styles.scss */
 .homeimage1-text p {
   color: #1C1C1C;
   padding-left: 20px;
@@ -22804,7 +22891,7 @@ p {
   font-size: 100%;
 }
 
-/* line 184, ../../app/assets/stylesheets/styles.scss */
+/* line 188, ../../app/assets/stylesheets/styles.scss */
 #imgcontainer1 .btn {
   z-index: 100;
   background-color: #77E0DB;
@@ -22818,7 +22905,7 @@ p {
   line-height: 40px;
 }
 
-/* line 197, ../../app/assets/stylesheets/styles.scss */
+/* line 201, ../../app/assets/stylesheets/styles.scss */
 #imgcontainer2 {
   background: url(piano-bg.jpg);
   background-size: 100% 100%;
@@ -22826,13 +22913,13 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: 1450px;
+  margin-top: 1430px;
   margin-bottom: 0px;
   margin-right: -50px;
   z-index: 100;
 }
 
-/* line 210, ../../app/assets/stylesheets/styles.scss */
+/* line 214, ../../app/assets/stylesheets/styles.scss */
 .homeimage2-text {
   z-index: 100;
   text-align: left;
@@ -22842,7 +22929,7 @@ p {
   width: 350px;
 }
 
-/* line 219, ../../app/assets/stylesheets/styles.scss */
+/* line 223, ../../app/assets/stylesheets/styles.scss */
 .homeimage2-text h1 {
   color: #1C1C1C;
   font-family: 'Poly', serif;
@@ -22851,7 +22938,7 @@ p {
   line-height: 95%;
 }
 
-/* line 227, ../../app/assets/stylesheets/styles.scss */
+/* line 231, ../../app/assets/stylesheets/styles.scss */
 .homeimage2-text h2 {
   color: #1C1C1C;
   font-family: 'Lato', sans-serif;
@@ -22860,7 +22947,7 @@ p {
   line-height: 110%;
 }
 
-/* line 235, ../../app/assets/stylesheets/styles.scss */
+/* line 239, ../../app/assets/stylesheets/styles.scss */
 .homeimage2-text p {
   color: #1C1C1C;
   font-family: 'Lato', sans-serif;
@@ -22868,7 +22955,7 @@ p {
   font-size: 100%;
 }
 
-/* line 242, ../../app/assets/stylesheets/styles.scss */
+/* line 246, ../../app/assets/stylesheets/styles.scss */
 #imgcontainer2 .btn {
   z-index: 100;
   background-color: #77E0DB;
@@ -22881,9 +22968,9 @@ p {
   line-height: 40px;
 }
 
-/* line 254, ../../app/assets/stylesheets/styles.scss */
+/* line 258, ../../app/assets/stylesheets/styles.scss */
 .instructable {
-  margin-top: 770px;
+  margin-top: 730px;
   margin-right: -50px;
   padding-top: 50px;
   padding-left: 30px;
@@ -22894,7 +22981,7 @@ p {
   right: 0;
 }
 
-/* line 266, ../../app/assets/stylesheets/styles.scss */
+/* line 270, ../../app/assets/stylesheets/styles.scss */
 .instructable .btn {
   background-color: #38362E;
   width: 250px;
@@ -22906,7 +22993,7 @@ p {
   line-height: 40px;
 }
 
-/* line 277, ../../app/assets/stylesheets/styles.scss */
+/* line 281, ../../app/assets/stylesheets/styles.scss */
 .instructable h1 {
   padding-left: 200px;
   margin-bottom: 50px;
@@ -22917,7 +23004,7 @@ p {
   font-style: italic;
 }
 
-/* line 287, ../../app/assets/stylesheets/styles.scss */
+/* line 291, ../../app/assets/stylesheets/styles.scss */
 .instructable h2 {
   color: black;
   margin-top: 40px;
@@ -22928,12 +23015,12 @@ p {
   line-height: 110%;
 }
 
-/* line 297, ../../app/assets/stylesheets/styles.scss */
+/* line 301, ../../app/assets/stylesheets/styles.scss */
 .instructable .span4 {
   margin-right: 0px;
 }
 
-/* line 301, ../../app/assets/stylesheets/styles.scss */
+/* line 305, ../../app/assets/stylesheets/styles.scss */
 .instructable p {
   color: black;
   width: 300px;
@@ -22943,7 +23030,7 @@ p {
 }
 
 /* Required for jQuery Masonry */
-/* line 311, ../../app/assets/stylesheets/styles.scss */
+/* line 315, ../../app/assets/stylesheets/styles.scss */
 .box {
   margin: 5px;
   padding: 5px;
@@ -22957,14 +23044,14 @@ p {
   width: 214px;
 }
 
-/* line 324, ../../app/assets/stylesheets/styles.scss */
+/* line 328, ../../app/assets/stylesheets/styles.scss */
 .box .name {
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
 }
 
-/* line 330, ../../app/assets/stylesheets/styles.scss */
+/* line 334, ../../app/assets/stylesheets/styles.scss */
 .box img {
   display: block;
   width: 100%;
@@ -22974,7 +23061,7 @@ p {
   border-radius: 5px;
 }
 
-/* line 339, ../../app/assets/stylesheets/styles.scss */
+/* line 343, ../../app/assets/stylesheets/styles.scss */
 .description {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -22982,58 +23069,59 @@ p {
   font-size: 14px;
 }
 
-/* line 350, ../../app/assets/stylesheets/styles.scss */
+/*  */
+/* line 354, ../../app/assets/stylesheets/styles.scss */
 .links li {
   display: inline;
   margin-right: 5px;
   margin-left: 5px;
 }
 
-/* line 356, ../../app/assets/stylesheets/styles.scss */
+/* line 360, ../../app/assets/stylesheets/styles.scss */
 .homebutton {
   margin-left: 200px;
   margin-right: 200px;
 }
 
-/* line 361, ../../app/assets/stylesheets/styles.scss */
+/* line 365, ../../app/assets/stylesheets/styles.scss */
 .content {
   margin-left: 100px;
   margin-bottom: 20px;
 }
 
-/* line 366, ../../app/assets/stylesheets/styles.scss */
+/* line 370, ../../app/assets/stylesheets/styles.scss */
 .team {
   margin-top: 120px;
 }
 
-/* line 370, ../../app/assets/stylesheets/styles.scss */
+/* line 374, ../../app/assets/stylesheets/styles.scss */
 .team .photo {
   margin-top: 10px;
 }
 
-/* line 374, ../../app/assets/stylesheets/styles.scss */
+/* line 378, ../../app/assets/stylesheets/styles.scss */
 .user .photo {
   height: 200px;
 }
 
-/* line 378, ../../app/assets/stylesheets/styles.scss */
+/* line 382, ../../app/assets/stylesheets/styles.scss */
 .well h4 {
   margin-bottom: 20px;
 }
 
-/* line 382, ../../app/assets/stylesheets/styles.scss */
+/* line 386, ../../app/assets/stylesheets/styles.scss */
 #instruments {
   margin-top: 50px;
 }
 
 /* For Footer */
-/* line 390, ../../app/assets/stylesheets/styles.scss */
+/* line 394, ../../app/assets/stylesheets/styles.scss */
 #footer-frame {
   background-color: #38362E;
   padding-top: 150px;
   padding-bottom: 200px;
   padding-left: 50px;
-  margin-top: 2150px;
+  margin-top: 2130px;
   margin-bottom: -40px;
   margin-right: -50px;
   width: 100%;
@@ -23043,7 +23131,7 @@ p {
   z-index: 0;
 }
 
-/* line 405, ../../app/assets/stylesheets/styles.scss */
+/* line 409, ../../app/assets/stylesheets/styles.scss */
 .site-links h6 {
   color: #77E0DB;
   font-family: 'Lato', sans-serif;
@@ -23051,7 +23139,7 @@ p {
   font-size: 100%;
 }
 
-/* line 412, ../../app/assets/stylesheets/styles.scss */
+/* line 416, ../../app/assets/stylesheets/styles.scss */
 .site-links li {
   color: #FFF;
   list-style: none;
@@ -23061,7 +23149,7 @@ p {
   font-size: 100%;
 }
 
-/* line 421, ../../app/assets/stylesheets/styles.scss */
+/* line 425, ../../app/assets/stylesheets/styles.scss */
 .site-links p {
   color: #FFF;
   width: 200px;
@@ -23071,13 +23159,13 @@ p {
   font-size: 100%;
 }
 
-/* line 430, ../../app/assets/stylesheets/styles.scss */
+/* line 434, ../../app/assets/stylesheets/styles.scss */
 .footer small {
   margin-top: 100px;
 }
 
 /* Sign Up page styling */
-/* line 437, ../../app/assets/stylesheets/styles.scss */
+/* line 441, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box {
   margin-top: 100px;
   margin-bottom: -2000px;
@@ -23087,29 +23175,29 @@ p {
   background-color: #F1F1F1;
 }
 
-/* line 446, ../../app/assets/stylesheets/styles.scss */
+/* line 450, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box .well {
   padding-top: 100px;
   padding-bottom: 50px;
   background-color: #F1F1F1;
 }
 
-/* line 452, ../../app/assets/stylesheets/styles.scss */
+/* line 456, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box h1 {
   color: #1C1C1C;
 }
 
-/* line 456, ../../app/assets/stylesheets/styles.scss */
+/* line 460, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box h3 {
   color: #77E0DB;
 }
 
-/* line 460, ../../app/assets/stylesheets/styles.scss */
+/* line 464, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box li {
   color: #1C1C1C;
 }
 
-/* line 464, ../../app/assets/stylesheets/styles.scss */
+/* line 468, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box input {
   border-radius: 0px;
   height: 30px;
@@ -23117,7 +23205,7 @@ p {
   border-radius: 0px;
 }
 
-/* line 471, ../../app/assets/stylesheets/styles.scss */
+/* line 475, ../../app/assets/stylesheets/styles.scss */
 #SignUp-box .btn {
   background-color: #77E0DB;
   color: #FFF;
@@ -23125,12 +23213,12 @@ p {
   margin-bottom: 20px;
 }
 
-/* line 478, ../../app/assets/stylesheets/styles.scss */
+/* line 482, ../../app/assets/stylesheets/styles.scss */
 .indexbox {
   padding-top: 150px;
 }
 
-/* line 482, ../../app/assets/stylesheets/styles.scss */
+/* line 486, ../../app/assets/stylesheets/styles.scss */
 #aboutbox {
   margin-top: 100px;
   margin-bottom: -2000px;
@@ -23140,12 +23228,12 @@ p {
   background-color: #F1F1F1;
 }
 
-/* line 491, ../../app/assets/stylesheets/styles.scss */
+/* line 495, ../../app/assets/stylesheets/styles.scss */
 #aboutbox h2 {
   margin-bottom: 50px;
 }
 
-/* line 495, ../../app/assets/stylesheets/styles.scss */
+/* line 499, ../../app/assets/stylesheets/styles.scss */
 #showbox {
   margin-top: 100px;
   margin-bottom: -2000px;
@@ -23153,6 +23241,31 @@ p {
   padding-top: 100px;
   padding-bottom: 50px;
   background-color: #F1F1F1;
+}
+
+/* line 508, ../../app/assets/stylesheets/styles.scss */
+#reservebox {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+}
+
+/* line 517, ../../app/assets/stylesheets/styles.scss */
+#editbox {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+}
+
+/* line 526, ../../app/assets/stylesheets/styles.scss */
+#editbox h1 {
+  margin-bottom: 20px;
 }
 
 /* trying to figure out "choose file button"
