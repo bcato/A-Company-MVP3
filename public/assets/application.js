@@ -16316,9 +16316,9 @@ $.widget( "ui.slider", $.ui.mouse, {
         itemSelector: ".box"
       }, $("#container").masonry({
         itemSelector: ".box"
-      }), {
+      }), $("#container").masonry, {
         columnWidth: function(containerWidth) {
-          return containerWidth / 5;
+          return containerWidth / 4;
         }
       });
     });
