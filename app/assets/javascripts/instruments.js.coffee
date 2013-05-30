@@ -11,8 +11,9 @@ jQuery ->
   				itemSelector: ".box"
 				
 				# set columnWidth a fraction of the container width
+				$("#container").masonry
 				columnWidth: (containerWidth) ->
-	    			containerWidth / 5
+	    			containerWidth / 4
 
 	$ ->
 	  $("#from").datepicker

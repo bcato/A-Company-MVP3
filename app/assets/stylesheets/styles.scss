@@ -313,6 +313,7 @@ p {
 
 .box {
 	margin: 5px;
+  margin-bottom: 30px;
 	padding: 5px;
 	font-size: 11px;
 	line-height: 1.4em;
@@ -337,6 +338,8 @@ p {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+  height: 200px;
+  width: 200px;
 }
 
 .description {
