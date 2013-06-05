@@ -1,4 +1,5 @@
 <div class="indexbox">
+
 	    
 	    <%= form_tag instruments_path, :method => :get do %>
 	    <p>
@@ -12,6 +13,9 @@
 	<div id="instruments">
 	  <%= render @instruments %>
 	</div>
+
+	<%= will_paginate @instruments %>
+
 </div>
 
 

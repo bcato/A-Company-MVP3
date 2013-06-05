@@ -1,4 +1,5 @@
-
+<div class="row-fluid">
+  <div class="span6">
    <%= simple_form_for(@instrument, html: {class: "form-vertical"}) do |f| %>
     <%= f.error_notification %>
     <%= f.full_error :image_file_size, class: "alert alert-error" %>
@@ -11,10 +12,22 @@
     <%= f.input :price, label: "Price", :input_html => { :as => :text, :style=>  "width: 20.000em;"} %>
   
     <%= f.input :description, as: :text, input_html: { rows: "3", style: 'width: 20.000em'} %>
-    <%= f.input :image, :hint => "current image: #{f.template.image_tag(f.object.image.url(:thumb))}" %>
-    <%= f.button :submit, class: "btn btn-primary" %>
+
+    <div class="edit_buttons">
+      <%= f.button :submit, class: "btn btn-primary" %>
+
     
-  <% end %>
+      <%= link_to 'BACK TO LISTINGS', instruments_path, class: "btn btn-small" %>
+    </div>
+  </div>
+  <div class="span3">
+    <%= f.input :image, label: "Upload an image", :hint => "current image: #{f.template.image_tag(f.object.image.url)}", class: "btn btn-small" %>
+  </div>
+</div>
+
+      <% end %>
+
+<!-- answer to styling the button: http://stackoverflow.com/questions/14509449/styling-file-upload-button-for-simple-form-for-with-bootstrap-in-rails-3
 
 
 <!-- kept in case I need to have a collection in a future form

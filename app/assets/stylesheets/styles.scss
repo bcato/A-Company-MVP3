@@ -20,10 +20,13 @@ $navbarBackground: white;
 }
 
 body {
-      margin-top: 100px;
-      padding-bottom: 40px;
-      color: #5a5a5a;
-      background-color: #F1F1F1;
+    max-width: 1200px;
+    margin-left: 0px auto;
+    margin-right: 0px auto;
+    margin-top: 100px;
+    padding-bottom: 40px;
+    color: #5a5a5a;
+    background-color: #F1F1F1;
     }
 
 h1 {
@@ -38,6 +41,13 @@ h2 {
   font-weight: 700;
   font-size: 32px;
   line-height: 110%
+}
+
+h3 {
+  font-family: 'Lato', serif;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 95%
 }
 
 p {
@@ -312,17 +322,16 @@ p {
 /* Required for jQuery Masonry */
 
 .box {
-	margin: 5px;
-  margin-bottom: 30px;
-	padding: 5px;
+  background-color: #FFF;
+	margin: 10px;
+	padding: 10px;
 	font-size: 11px;
 	line-height: 1.4em;
 	float: left;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	box-shadow: 1px 1px 10px #444;
-	width: 214px;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	border-radius: none;
+	box-shadow: none;
 }
 
 .box .name {
@@ -334,12 +343,12 @@ p {
 .box img {
 	display: block;
 	width: 100%;
-  margin-top: 20px;
+  margin: 0px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-  height: 200px;
-  width: 200px;
+  height: auto;
+  width: auto;
 }
 
 .description {
@@ -347,6 +356,17 @@ p {
   margin-bottom: 10px;
   padding-bottom: 0px;
   font-size: 14px;
+}
+
+.index_links {
+  color: #77E0DB;
+}
+
+.index_links .span1 {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100px;
+  color: #77E0DB;
 }
 
 /*  */
@@ -440,8 +460,12 @@ p {
 
 /* Sign Up page styling */
 
+.devise_links {
+  color: #77E0DB;
+}
+
 #SignUp-box {
-  margin-top: 100px;
+  margin-top: -40px;
   margin-bottom: -2000px;
   width: 100%;
   padding-top: 100px;
@@ -459,18 +483,22 @@ p {
   color: #1C1C1C;
 }
 
-#SignUp-box h3 {
+#SignUp-box h2 {
   color: #77E0DB;
+  margin-bottom: 30px;
 }
 
-#SignUp-box li {
+#SignUp-box .span4 .span6 {
   color: #1C1C1C;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 145%;
+  letter-spacing: 1px;
 }
 
 #SignUp-box input {
   border-radius: 0px;
   height: 30px;
-  width: 150px; 
   border-radius: 0px;
 }
 
@@ -479,6 +507,65 @@ p {
   color: #FFF;
   height: 50px;
   margin-bottom: 20px;
+  
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 145%;
+  letter-spacing: 2px;
+
+}
+
+#Login-box {
+  margin-top: -40px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+} 
+
+#Login-box .well {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+} 
+
+#Login-box h1 {
+  color: #1C1C1C;
+}
+
+#Login-box h2 {
+  color: #77E0DB;
+  margin-bottom: 30px;
+}
+
+#Login-box .span4 .span6 {
+  color: #1C1C1C;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 145%;
+  letter-spacing: 1px;
+}
+
+#Login-box input {
+  border-radius: 0px;
+  height: 30px;
+  border-radius: 0px;
+}
+
+#Login-box .boolean {
+  float: left;
+}
+
+#Login-box .btn {
+  background-color: #77E0DB;
+  color: #FFF;
+  height: 50px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 145%;
+  letter-spacing: 2px;
 }
 
 .indexbox {
@@ -498,13 +585,41 @@ p {
   margin-bottom: 50px;
 }
 
-#showbox {
-  margin-top: 100px;
+#user_showbox {
+  margin-top: -60px;
   margin-bottom: -2000px;
   width: 100%;
   padding-top: 100px;
   padding-bottom: 50px;
   background-color: #F1F1F1;
+}
+
+#user_showbox .span12 {
+  background-color: #fff;
+  padding: 50px;
+
+}
+
+#user_showbox h2 {
+  color: #77E0DB;
+}
+
+#user_showbox .btn {
+  background-color: #77E0DB;
+  color: #FFF;
+  height: 50px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 145%;
+  letter-spacing: 2px;
+}
+
+.user_photo img {
+  width: 220px;
+  height: 220px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 #reservebox {
@@ -517,7 +632,7 @@ p {
 }
 
 #editbox {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: -2000px;
   width: 100%;
   padding-top: 100px;
@@ -528,6 +643,49 @@ p {
 #editbox h1 {
   margin-bottom: 20px;
 }
+
+#editbox .span3 {
+  margin-left: 50px;
+}
+
+.edit_buttons {
+  margin-top: 20px;
+}
+
+#instrument_showbox {
+  margin-top: 100px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #FFF;
+}
+
+#instrument_showbox .span6 {
+  margin-left: 100px;
+}
+
+.user-info {
+  display: inline-block;
+}
+
+.instrument_img_show {
+  height: auto;
+  width: auto;
+}
+
+.user_thumb {
+  height: 50px;
+  width: 50px;
+  margin-top: 50px;
+}
+
+.user_thumbname {
+  margin-top: 50px; 
+}
+
 
 
 

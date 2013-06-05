@@ -12,6 +12,8 @@ gem 'sunspot_solr'
 gem 'state_machine'
 gem 'faker'
 gem 'jquery-ui-rails'
+gem 'noty-rails'
+gem 'will_paginate', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

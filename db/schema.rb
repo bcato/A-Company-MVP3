@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521220945) do
+ActiveRecord::Schema.define(:version => 20130605004208) do
 
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(:version => 20130521220945) do
   add_index "installs", ["reset_password_token"], :name => "index_installs_on_reset_password_token", :unique => true
 
   create_table "instruments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "renter_id"
     t.string   "description"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
-    t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -43,7 +44,6 @@ ActiveRecord::Schema.define(:version => 20130521220945) do
     t.string   "name"
     t.string   "category"
     t.string   "state"
-    t.integer  "renter_id"
     t.integer  "price"
   end
 
@@ -79,6 +79,12 @@ ActiveRecord::Schema.define(:version => 20130521220945) do
     t.datetime "avatar_updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "liner"
+    t.string   "fav_I"
+    t.string   "fav_band"
+    t.string   "cur_learn"
+    t.string   "other"
+    t.string   "description"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

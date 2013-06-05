@@ -22,4 +22,10 @@
 //= require_tree .
 
 jQuery -> 
-	$('.dropdown-toggle').dropdown();
+	$('.dropdown-toggle').dropdown()
+	$("input[type=file]").filestyle
+		image: "guitar_logo.png"
+		imageheight: 22
+		imagewidth: 82
+		width: 250
+

@@ -1,40 +1,43 @@
-<div id="SignUp-box">
-	<div class="row">
-		<div class="span6 offset2">
-				<%= image_tag @instrument.image %>
-			<h2>
-				<%= @instrument.name %>
-			</h2>
-			<h4>
-			  	<%= @instrument.user.first_name %>
-			</h4>
-				<strong>
-					All the deets: </br>
-				</strong>
-				<p>
-			  		<%= @instrument.description %>
-				</p>
-			<hr/>
-			<% if current_user == @instrument.user %>
-				<p>
-					Happy with it? 
-				</p>
-				<%= link_to 'Yep', instruments_path, class: "btn btn-primary" %> 
-				<%= link_to 'Nope', edit_instrument_path(@instrument), class: "btn btn-primary" %> 
-
-			<% else %>
-			<p>Like what you See?</p>
-			<%= link_to 'Rent this Instrument', reservation_instrument_path, class: "btn btn-primary" %>
-			<%= link_to 'Back to instruments', instrument_path, class: "btn btn-primary" %>
-			<% end %>
-		</div>
-			<div class="span4 offset">
-				<div class="hero-unit">
-					<h3>
-						<%= @instrument.price %>
-					</h3>
-				</div>
+<div id="instrument_showbox">
+	<div class="row-fluid">
+		<div class="span4">
+				<%= image_tag @instrument.image, :class => "instrument_img_show" %>
+			<div class="user_info">
+					<%= image_tag @instrument.user.avatar, :class => "user_thumb" %>
+				  	<%= @instrument.user.first_name %>
 			</div>
+		</div>
+		<div class="span6">
+				<h2>
+					<%= @instrument.name %>
+				</h2>
+				<h3>
+					<%= @instrument.category %>
+				</h3>
+				<h4>
+					<%= @instrument.price %> /week
+				</h4>
+				<p>
+		  			<%= @instrument.description %>
+				</p>
+				<% if current_user == @instrument.user %>
+					Are you happy with this listing?
+					<br/>
+					<%= link_to 'Yes', instruments_path, class: "btn btn-primary" %> 
+					<%= link_to 'NO, EDIT', edit_instrument_path(@instrument), class: "btn btn-primary" %> 
+
+				<% else %>
+					<%= link_to 'BACK TO LISTINGS', instrument_path, class: "btn btn-primary" %>
+					<%= link_to 'RENT', reservation_instrument_path, class: "btn btn-primary" %>
+				<% end %>
+			
+			
+				<h3>
+					
+				</h3>
+			</div>
+			
+		</div>
 	</div>
 </div>	
 

@@ -1,0 +1,10 @@
+
+/*
+$('#instruments').append('<%= j render(@instruments) %>');
+<%= if @instruments.next_page %>
+	$('.pagination').replaceWith('<%= j will_paginate(@instruments) %>')
+<%= else %>
+	$('.pagination').remove();
+<%= end %>
+<%= sleep 1 %>
+*/

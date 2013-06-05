@@ -1,24 +1,30 @@
-<div id="showbox">
-
-<div id="profile">
-			<div class="user photo pull-left">
-				<% if @user.avatar? %>
-					<%= image_tag @user.avatar %>
-				<% else %>
-					<%= image_tag "/images/missing.jpeg", :html => { :id => "noUserProfile" } %>
-				<% end %>
-			</div>
-			<div class="content">
-				<h3><%= @user.first_name %></h3>
-				<p class> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-          		ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-          		sit amet risus. Etiam porta sem malesuada magna   mollis euismod. Donec sed
-      		    odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
-          		ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-          		sit amet risus. Etiam porta sem malesuada magna   mollis euismod. Donec sed
-      		    odio dui.</p>
-
-      		    <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-inverse btn-large" %>
-			</div>
+<div id="user_showbox">
+	<div class="container">
+	<div class="span9">
+		<div class="user_photo pull-left">
+			<% if @user.avatar? %>
+				<%= image_tag @user.avatar %>
+			<% else %>
+				<%= image_tag "/images/missing.jpeg", :html => { :id => "noUserProfile" } %>
+			<% end %>
 		</div>
+		<div class="content">
+			<% if current_user == @user %>
+				<h2>This is you.</h2>
+			<% else %>
+				<h3><%= @user.first_name %></h3>
+			<% end %>
+				<p class> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
+	      		ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+	      		sit amet risus. Etiam porta sem malesuada magna   mollis euismod. Donec sed
+	  		    odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
+	      		ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+	      		sit amet risus. Etiam porta sem malesuada magna   mollis euismod. Donec sed
+	  		    odio dui.</p>
+	  		
+
+  		    <%= link_to 'Edit', edit_user_registration_path, class: "btn btn-inverse btn-large" %>
+		</div>
+	</div>
+	</div>
 </div>
