@@ -20,13 +20,15 @@ $navbarBackground: white;
 }
 
 body {
-    max-width: 1200px;
-    margin-left: 0px auto;
+    width: 100%;
+    max-width: 800px;
+    margin-left: 40px auto;
     margin-right: 0px auto;
-    margin-top: 100px;
+    margin-top: 200px;
     padding-bottom: 40px;
     color: #5a5a5a;
     background-color: #F1F1F1;
+    overflow-x: hidden;
     }
 
 h1 {
@@ -57,7 +59,7 @@ p {
 }
 
 .container {
-  left: 0;
+  margin-left: 40px;
   right: 0;
 }
 
@@ -168,7 +170,7 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: 30px;
+  margin-top: -80px;
   margin-bottom: 500px;
   margin-right: -50px;
   z-index: 100;
@@ -233,7 +235,7 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: 1430px;
+  margin-top: 1320px;
   margin-bottom: 0px;
   margin-right: -50px;
   z-index: 100;
@@ -284,7 +286,7 @@ p {
 }
 
 .instructable {
-  margin-top: 730px;
+  margin-top: 620px;
   margin-right: -50px;
   padding-top: 50px;
   padding-left: 30px;
@@ -299,7 +301,7 @@ p {
   background-color: #38362E;
   width: 325px;
   margin-top: 0px;
-  margin-left: -100px;
+  margin-left: -150px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 100%;
@@ -351,6 +353,7 @@ p {
 	-moz-border-radius: none;
 	border-radius: none;
 	box-shadow: none;
+  width: 220px;
 }
 
 .box .name {
@@ -464,7 +467,7 @@ p {
   padding-top: 150px;
   padding-bottom: 200px;
   padding-left: 50px;
-  margin-top: 2130px;
+  margin-top: 2000px;
   margin-bottom: -40px;
   margin-right: -50px;
   width: 100%;
