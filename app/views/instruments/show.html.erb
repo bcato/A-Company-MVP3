@@ -4,7 +4,7 @@
 				<%= image_tag @instrument.image, :class => "instrument_img_show" %>
 			<div class="user_info">
 					<%= image_tag @instrument.user.avatar, :class => "user_thumb" %>
-				  	<%= @instrument.user.first_name %>
+				  	<h2><%= @instrument.user.first_name %></h2>
 			</div>
 		</div>
 		<div class="span6">
@@ -15,11 +15,12 @@
 					<%= @instrument.category %>
 				</h3>
 				<h4>
-					<%= @instrument.price %> /week
+					$<%= @instrument.price %> /week
 				</h4>
 				<p>
 		  			<%= @instrument.description %>
 				</p>
+				<hr>
 				<% if current_user == @instrument.user %>
 					Are you happy with this listing?
 					<br/>
@@ -27,7 +28,7 @@
 					<%= link_to 'NO, EDIT', edit_instrument_path(@instrument), class: "btn btn-primary" %> 
 
 				<% else %>
-					<%= link_to 'BACK TO LISTINGS', instrument_path, class: "btn btn-primary" %>
+					<%= link_to 'BACK TO LISTINGS', instrument_path, class: "btn btn-primary btn-large" %>
 					<%= link_to 'RENT', reservation_instrument_path, class: "btn btn-primary" %>
 				<% end %>
 			

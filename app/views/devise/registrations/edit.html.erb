@@ -9,11 +9,7 @@
         <%= f.input :first_name %>
         <%= f.input :last_name %>
         <%= f.input :email %>
-        <%= f.input :fav_I, label: "One-liner describing yourself" %>
-        <%= f.input :description, label: "Longer description about yourself", as: :text, input_html: { rows: "3" } %>
-        <%= f.input :fav_band, label: "What's your favorite band?" %>
-        <%= f.input :cur_learn, label: "What are you trying to learn?" %>
-        <%= f.input :other, label: "Other" %>
+        
         <%= f.input :password, label: "New Password", autocomplete: "off" %>
         <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
         <%= f.input :current_password %>
@@ -41,3 +37,11 @@
 
   </div>
 </div>
+
+
+
+     <!--   <%= f.input #:fav_I, label: "One-liner describing yourself" %>
+        <%= f.input #:description, label: "Longer description about yourself", as: :text, input_html: { rows: "3" } %>
+        <%= f.input #:fav_band, label: "What's your favorite band?" %>
+        <%= f.input #:cur_learn, label: "What are you trying to learn?" %>
+        <%= f.input #:other, label: "Other" %>

@@ -65,7 +65,10 @@ p {
   border: none;
   background: #34495e;
   color: white;
-  font-size: 16.5px;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   text-decoration: none;
   text-shadow: none;
   -webkit-box-shadow: none;
@@ -79,6 +82,22 @@ p {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -webkit-backface-visibility: hidden; }
+
+
+.btn-primary {
+  background-color: #77E0DB;
+  color: #FFF;
+  height: 50px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 170px;
+  height: 50px;
+  margin-top: 15px;
+}
+
 
 /* CUSTOMIZE THE NAVBAR */
 
@@ -197,7 +216,7 @@ p {
 #imgcontainer1 .btn {
   z-index: 100;
   background-color: #77E0DB;
-  width: 300px;
+  width: 250px;
   height: 40px;
   margin-top: 20px;
   margin-left: 20px;
@@ -278,7 +297,7 @@ p {
 
 .instructable .btn {
   background-color: #38362E;
-  width: 250px;
+  width: 325px;
   margin-top: 0px;
   margin-left: -100px;
   font-family: 'Lato', sans-serif;
@@ -338,6 +357,32 @@ p {
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 145%;
+  color: #000;
+}
+
+.box .category {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 145%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C7C5BE;
+  margin-bottom: 20px;
+}
+
+.box .price {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 145%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .box img {
@@ -351,11 +396,12 @@ p {
   width: auto;
 }
 
-.description {
+.box .description {
 	margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 0px;
   font-size: 14px;
+  line-height: 120%;
 }
 
 .index_links {
@@ -498,8 +544,9 @@ p {
 
 #SignUp-box input {
   border-radius: 0px;
-  height: 30px;
   border-radius: 0px;
+  width: 300px;
+  height: 50px;
 }
 
 #SignUp-box .btn {
@@ -507,12 +554,12 @@ p {
   color: #FFF;
   height: 50px;
   margin-bottom: 20px;
-  
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 145%;
+  font-size: 14px;
   letter-spacing: 2px;
-
+  width: 170px;
+  height: 50px;
 }
 
 #Login-box {
@@ -549,8 +596,9 @@ p {
 
 #Login-box input {
   border-radius: 0px;
-  height: 30px;
   border-radius: 0px;
+  width: 300px;
+  height: 50px;
 }
 
 #Login-box .boolean {
@@ -564,8 +612,10 @@ p {
   margin-bottom: 20px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 145%;
+  font-size: 14px;
   letter-spacing: 2px;
+  width: 125px;
+  height: 50px;
 }
 
 .indexbox {
@@ -648,8 +698,26 @@ p {
   margin-left: 50px;
 }
 
-.edit_buttons {
-  margin-top: 20px;
+#add-box {
+  margin-top: 150px;
+  margin-bottom: -2000px;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #F1F1F1;
+}
+
+#add-box .btn {
+  background-color: #77E0DB;
+  color: #FFF;
+  height: 50px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 170px;
+  height: 50px;
 }
 
 #instrument_showbox {

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605004208) do
+ActiveRecord::Schema.define(:version => 20130607183459) do
 
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -60,6 +60,19 @@ ActiveRecord::Schema.define(:version => 20130605004208) do
   add_index "rentships", ["state"], :name => "index_rentships_on_state"
   add_index "rentships", ["user_id", "renter_id"], :name => "index_rentships_on_user_id_and_renter_id"
 
+  create_table "user_info", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "liner"
+    t.string   "fav_I"
+    t.string   "fav_band"
+    t.string   "cur_learn"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "user_info", ["user_id"], :name => "index_user_info_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -79,11 +92,6 @@ ActiveRecord::Schema.define(:version => 20130605004208) do
     t.datetime "avatar_updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "liner"
-    t.string   "fav_I"
-    t.string   "fav_band"
-    t.string   "cur_learn"
-    t.string   "other"
     t.string   "description"
   end
 
