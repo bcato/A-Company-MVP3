@@ -26,6 +26,7 @@ end
                     #:styles => { :small => '30x30#', :large => '100x100#' },
                     :default_url => '/assets/images/missing.png'
 
+  has_one :user_info, :inverse_of => :user
   has_many :instruments
   has_many :renters, 
                       conditions: { rentships: {state: 'accepted'} }

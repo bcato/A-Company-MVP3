@@ -1,5 +1,5 @@
 class UserNotifier < ActionMailer::Base
-  default from: "from@andante.cc"
+  default from: "hello@andante.cc"
 
   def instrument_requested(instrument_id)
   	instrument = Instrument.find(instrument_id)

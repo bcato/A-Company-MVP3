@@ -30,7 +30,9 @@ class RentshipsController < ApplicationController
 		end
 	end
 
-	def edit
-		
+	def destroy
+		@user = Rentship.find(params[:id])
+		#current_user.unrent!(@user)
+		#redirect_to @user
 	end
 end
