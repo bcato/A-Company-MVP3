@@ -29,7 +29,7 @@
 
 				<% else %>
 					<%= link_to 'BACK TO LISTINGS', instrument_path, class: "btn btn-primary btn-large" %>
-					<%= link_to 'RENT', reservation_instrument_path, class: "btn btn-primary" %>
+					<%= link_to 'RENT', new_instrument_rental_path(@instrument), class: "btn btn-primary" %>
 				<% end %>
 			
 			

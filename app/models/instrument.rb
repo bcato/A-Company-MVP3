@@ -13,7 +13,8 @@ class Instrument < ActiveRecord::Base
   belongs_to :user
   belongs_to :renter, class_name: 'User', foreign_key: 'renter_id'
             
-  
+  has_many :rentals
+
   has_attached_file :image
 
 

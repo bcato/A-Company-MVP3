@@ -28,14 +28,6 @@ end
 
   has_one :user_info, :inverse_of => :user
   has_many :instruments
-  has_many :renters, 
-                      conditions: { rentships: {state: 'accepted'} }
 
-  has_many :pending_rentships, class_name: 'Rentships',
-                                 foreign_key: :user_id,
-                                 conditions: { rentships: { state: 'pending' } }
-
-  has_many :pending_renters, through: :pending_rentships, source: :renter
-
-  
+  has_many :rentals
 end

@@ -1,9 +1,6 @@
 ClistApp::Application.routes.draw do
   resources :instruments do
-    get 'reservation', :on => :member
-      member do
-        post :request
-      end
+    resources :rentals
   end
 
   devise_for :users do
@@ -11,27 +8,17 @@ ClistApp::Application.routes.draw do
   end
   resources :users, :only => [:show]
 
-  resources :rentships
-
   devise_for :installs
 
-get 'about' => 'pages#about'
-get 'team' => 'pages#team'
-get 'rent_info' => 'pages#rent_info'
-get 'lend_info' => 'pages#lend_info'
-get 'info' => 'pages#info'
+  get 'about' => 'pages#about'
+  get 'team' => 'pages#team'
+  get 'rent_info' => 'pages#rent_info'
+  get 'lend_info' => 'pages#lend_info'
+  get 'info' => 'pages#info'
 
+  root :to => 'pages#home'
 
-resources :rentships do
-  member do
-    put :accept
-  end
-end
-
-
-root :to => 'pages#home'
-
-match 'user/:id' => 'users#show'
+  match 'user/:id' => 'users#show'
 
 
   # The priority is based upon order of creation:
