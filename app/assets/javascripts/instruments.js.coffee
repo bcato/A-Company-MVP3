@@ -26,14 +26,14 @@ jQuery ->
 	    			containerWidth / 4
 
 	$ ->
-	  $("#from").datepicker
+	  $("#rental_start_on").datepicker
 	    defaultDate: "+1w"
 	    changeMonth: true
 	    numberOfMonths: 2
 	    onClose: (selectedDate) ->
 	      $("#to").datepicker "option", "minDate", selectedDate
 
-	  $("#to").datepicker
+	  $("#rental_end_on").datepicker
 	    defaultDate: "+1w"
 	    changeMonth: true
 	    numberOfMonths: 2

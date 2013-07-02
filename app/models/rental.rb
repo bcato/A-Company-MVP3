@@ -4,5 +4,8 @@ class Rental < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :instrument
 
-	attr_accessible :user, :user_id, :instrument_id
+	attr_accessible :user, :user_id, :instrument_id, :start_on, :end_on
+
+	validates :start_on, presence: true
+	#validates :end_on, presence: true
 end

@@ -25,13 +25,14 @@ class RentalsController < ApplicationController
 
 
 	def create
-			@rental = current_user.rentals.build(:renter_id => params[:renter_id])
-		if   @rental.save
-			flash[:success] = "You are now renting an instrument to #{@renter.name}"
-			redirect_to users_path(@renter)
-		else
-			flash[:error] = "Renter required"
-			redirect_to root_path
+		@rental = current_user.rentals.build(params[:rental])
+		if @rental.save
+			flash[:success] = "Rental requested for #{@rental.instrument.name}"
+			redirect_to root_url
+		else 
+			raise params.inspect
+			flash[:error] = @rental.errors.full_messages.join("\n")
+			redirect_to new_instrument_rental_path(@rental.instrument,:rental => params[:rental])
 		end
 	end
 

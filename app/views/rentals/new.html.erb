@@ -28,6 +28,8 @@
 		<div class="span4 offset">
 			<div class="hero-unit">
 				<%= form_for([@rental.instrument, @rental]) do |f| %>
+					<%= f.hidden_field(:user_id) %>
+					<%= f.hidden_field(:instrument_id) %>
 					<%= f.label(:start_on, "From") %>
 					<%= f.text_field(:start_on) %>
 					<%= f.label(:end_on, "To") %>
