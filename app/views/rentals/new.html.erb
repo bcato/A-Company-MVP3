@@ -1,0 +1,44 @@
+<div id="reservebox">
+<div class="row">
+	<div class="span6 offset2">
+				<%= image_tag @instrument.image %>
+		<h2>
+			<%= @instrument.name %>
+		</h2>
+		<h4>
+		  	<%= @instrument.user.first_name %>
+		</h4>
+			<strong>
+				$<%= @instrument.price %> /week </br>
+			</strong>
+			<p>
+		  		<%= @instrument.description %>
+			</p>
+		<hr/>
+		<div class:"well">
+			<% if current_user.id == @instrument.user_id %>
+				<p>
+					Happy with it? 
+				</p>
+				<%= link_to 'Nope', edit_instrument_path(@instrument), class: "btn btn-primary" %> |
+			<% end %>
+			
+		</div>
+		</div>
+		<div class="span4 offset">
+			<div class="hero-unit">
+				<%= form_for([@rental.instrument, @rental]) do |f| %>
+					<%= f.label(:start_on, "From") %>
+					<%= f.text_field(:start_on) %>
+					<%= f.label(:end_on, "To") %>
+					<%= f.text_field(:end_on) %>
+					<%= f.submit 'Rent this Instrument' %>
+					<%= link_to 'Back to instruments', instruments_path, class: "btn btn-primary" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+
