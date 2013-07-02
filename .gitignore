@@ -25,3 +25,6 @@ doc/
 
 # Ignore sample images
 /sample images
+
+# Ignore public assets
+/public/assests
