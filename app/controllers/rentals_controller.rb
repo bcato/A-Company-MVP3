@@ -28,7 +28,7 @@ class RentalsController < ApplicationController
 		@rental = current_user.rentals.build(params[:rental])
 		if @rental.save
 			flash[:success] = "Rental requested for #{@rental.instrument.name}"
-			redirect_to root_url
+			redirect_to new_instrument_rental_path(@rental.instrument,:rental => params[:rental])
 		else 
 			raise params.inspect
 			flash[:error] = @rental.errors.full_messages.join("\n")

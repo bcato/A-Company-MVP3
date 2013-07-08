@@ -5,10 +5,10 @@ class UserNotifier < ActionMailer::Base
   	instrument = Instrument.find(instrument_id)
 
   	@user = instrument.user
-  	@renter = instrument.renter
+  	@renter = rental.user
 
   	mail to: @user.email,
-  		subject: "Hey there. #{@renter.name} wants to rent your instrument. How do you feel about that?"
+  		subject: "Hey there. #{@rental.user.first_name} wants to rent your instrument. How do you feel about that?"
   end
 
 
@@ -19,7 +19,7 @@ class UserNotifier < ActionMailer::Base
   	@renter = instrument.renter
 
   	mail to: @user.email,
-  		subject: "Great news, #{@user.name} has agreed to lend you #{@instrument.name}! Isn't that cool!"
+  		subject: "Great news, #{@user.first_name} has agreed to lend you #{@instrument.name}! Isn't that cool!"
   end
 
   def instrument_request_canceled(instrument_id)

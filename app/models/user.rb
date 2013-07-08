@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
 
  def fullname
   self.fullname = self.first_name + "" + self.last_name
-end
+ end
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :fullname, :liner, :fav_I, :fav_band, :cur_learn, :other
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
   attr_accessible :title, :body
   attr_accessible :avatar
 
@@ -30,4 +30,5 @@ end
   has_many :instruments
 
   has_many :rentals
+  has_many :instrument_rentals, through: :instruments, source: :rentals
 end

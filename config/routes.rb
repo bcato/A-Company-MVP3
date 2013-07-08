@@ -1,6 +1,12 @@
 ClistApp::Application.routes.draw do
+
   resources :instruments do
     resources :rentals
+  end
+
+  resources :rentals do
+    # /rentals/:rental_id/events?event=approve
+    resources :events, only: :create
   end
 
   devise_for :users do
@@ -8,7 +14,6 @@ ClistApp::Application.routes.draw do
   end
   resources :users, :only => [:show]
 
-  devise_for :installs
 
   get 'about' => 'pages#about'
   get 'team' => 'pages#team'

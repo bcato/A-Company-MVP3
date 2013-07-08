@@ -1,24 +1,84 @@
 <div id="user_showbox">
-	<div class="container">
-	<div class="span9">
-		<div class="user_photo pull-left">
-			<% if @user.avatar? %>
-				<%= image_tag @user.avatar %>
-			<% else %>
-				<%= image_tag "/images/missing.jpeg", :html => { :id => "noUserProfile" } %>
-			<% end %>
+	<div class="row-fluid">
+		<div class="span4">
+			<div class="user_photo pull-left">
+				<% if @user.avatar? %>
+					<%= image_tag @user.avatar %>
+				<% else %>
+					<%= image_tag "/images/missing.jpeg", :html => { :id => "noUserProfile" } %>
+				<% end %>
+			</div>
 		</div>
-		<div class="content">
-			<% if current_user == @user %>
-				<h2>This is you.</h2>
-			<% else %>
-				<h3><%= @user.first_name %></h3>
-			<% end %>
-			
-	  		
+		<div class="span8">
+			<div class="content">
+				<% if current_user == @user %>
+					<h2>This is you.</h2>
+				<% else %>
+					<h3><%= @user.first_name %></h3>
+				<% end %>
 
-  		    <%= link_to 'Edit', edit_user_registration_path, class: "btn btn-inverse btn-large" %>
+	  		    <%= link_to 'Edit', edit_user_registration_path, class: "btn btn-inverse btn-large" %>
+	  		</div>
 		</div>
 	</div>
+	<table class= "table table-striped">
+		<% if current_user == @user %>
+		<thead>
+			<h3>Rental situation</h3>
+		<hr>
+			<h4>Pending Rental Requests</h4>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+		</thead>
+					<tbody>
+						<% if @user.instrument_rentals.where(state: "requested").size > 0 %>
+							<% @user.instrument_rentals.where(state: "requested").each do |rental| %>
+								<p>
+									
+									<%= link_to rental.user.first_name, user_path(rental.user) %>
+									wants to rent
+									<%= link_to rental.instrument.name, instrument_path(rental.instrument) %>
+									from
+									<%= rental.start_on %>
+									to
+									<%= rental.end_on %>
+
+									<%= link_to("Accept", rental_events_path(rental, event: "accept"), method: :post) %>
+									<%= link_to("Reject", rental_events_path(rental, event: "reject"), method: :post) %>
+							
+							</p>
+							<% end %>
+						<% end %>
+					</tbody>
+	</table>
+	<table class= "table table-striped">
+				<h4>Instruments you are currently renting out</h4>
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+						<% if @user.instrument_rentals.where(state: "accepted").size > 0 %>
+							<% @user.instrument_rentals.where(state: "accepted").each do |rental| %>
+								<p>
+									You've agreed to let <%= link_to rental.user.first_name, user_path(rental.user) %> rent
+									<%= link_to rental.instrument.name, instrument_path(rental.instrument) %> from
+									<%= rental.start_on %>
+									to
+									<%= rental.end_on %>
+									<%= link_to("Cancel", rental_events_path(rental, event: "cancel"), method: :post) %>
+								</p>
+				</tbody>
+							<% end %>
+						<% end %>
+			<% end %>
+	</table>		
 	</div>
 </div>

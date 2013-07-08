@@ -1,6 +1,7 @@
+<%= form_for([@rental.instrument, @rental]) do |f| %>
 <div id="reservebox">
 <div class="row">
-	<div class="span6 offset2">
+	<div class="span6 offset1">
 				<%= image_tag @instrument.image %>
 		<h2>
 			<%= @instrument.name %>
@@ -15,6 +16,8 @@
 		  		<%= @instrument.description %>
 			</p>
 		<hr/>
+			<%= f.submit 'Rent this Instrument', class: "btn btn-primary" %>
+			<%= link_to 'Back to instruments', instruments_path, class: "btn btn-primary" %>
 		<div class:"well">
 			<% if current_user.id == @instrument.user_id %>
 				<p>
@@ -25,19 +28,14 @@
 			
 		</div>
 		</div>
-		<div class="span4 offset">
-			<div class="hero-unit">
-				<%= form_for([@rental.instrument, @rental]) do |f| %>
-					<%= f.hidden_field(:user_id) %>
-					<%= f.hidden_field(:instrument_id) %>
-					<%= f.label(:start_on, "From") %>
-					<%= f.text_field(:start_on) %>
-					<%= f.label(:end_on, "To") %>
-					<%= f.text_field(:end_on) %>
-					<%= f.submit 'Rent this Instrument' %>
-					<%= link_to 'Back to instruments', instruments_path, class: "btn btn-primary" %>
-				<% end %>
-			</div>
+		<div class="span4">
+				<%= f.hidden_field(:user_id) %>
+				<%= f.hidden_field(:instrument_id) %>
+				<%= f.label(:start_on, "From") %>
+				<%= f.text_field(:start_on) %>
+				<%= f.label(:end_on, "To") %>
+				<%= f.text_field(:end_on) %>
+			<% end %>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-class User_Info < ActiveRecord::Base
+class UserInfo < ActiveRecord::Base
 
 	attr_accessible :liner, :fav_I, :fav_band, :cur_learn, :other
 	

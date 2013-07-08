@@ -25,7 +25,7 @@ end
 
 group :development, :test do
 	gem 'sqlite3'
-	#gem "rspec-rails"
+	gem "rspec-rails"
   	#gem "database_cleaner"
   	#gem "cucumber-rails", require: false
   	#gem "capybara-webkit"
