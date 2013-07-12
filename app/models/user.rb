@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
  end
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :liner, :other, :fav_I, :fav_band
   attr_accessible :title, :body
   attr_accessible :avatar
 
@@ -26,9 +26,10 @@ class User < ActiveRecord::Base
                     #:styles => { :small => '30x30#', :large => '100x100#' },
                     :default_url => '/assets/images/missing.png'
 
-  has_one :user_info, :inverse_of => :user
   has_many :instruments
 
   has_many :rentals
   has_many :instrument_rentals, through: :instruments, source: :rentals
+
+  #has_many :ship_addy
 end

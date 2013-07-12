@@ -52,11 +52,4 @@ class RentalsController < ApplicationController
 		redirect_to :back
 	end
 
-  #def request
-   # @instrument = current_user.instruments.find(params[:id]).request!
-    #@instrument.state = "rented"
-    #@instrument.save!
-
-    #redirect_to instruments_path, notice: "Instrument was requested!"
-  #end
 end

@@ -2,14 +2,39 @@ class Rental < ActiveRecord::Base
 
 	belongs_to :user
 	belongs_to :instrument
+	has_one :ship_addy
 
 	attr_accessible :user, :user_id, :instrument_id, :instrument, :start_on, :end_on
 
+	#code to make sure start and end dates are correct and not duplicative
 	validates :start_on, presence: true
 	#validates :end_on, presence: true
 
 	validate :start_on_must_be_before_end_on
 
+	#scope :overlaps, ->(start_on, end_on) do
+	#	where "((julianday(Date(start_on)) - julianday(?))) * ((julianday(Date(?)) - julianday(end_on))) >= 0", end_on, start_on
+	#end
+
+	#def overlaps?
+	#	overlaps.exists?
+	#end
+
+	#def overlaps
+	#	siblings.overlaps start_on, end_on
+	#end
+
+	#validate :not_overlap
+
+	#def not_overlap
+	#	errors.add(:base, 'message') if overlaps?
+	#end
+
+	#def siblings
+	#	user.rentals.where('id != ?', id || -1)
+	#end
+
+	#state machine code
 	state_machine :state, :initial => :requested do
 	    event :accept do
 	        transition :requested => :accepted

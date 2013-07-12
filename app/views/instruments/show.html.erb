@@ -2,8 +2,11 @@
 	<div class="row-fluid">
 		<div class="span4">
 				<%= image_tag @instrument.image, :class => "instrument_img_show" %>
+
 			<div class="user_info">
-					<%= image_tag @instrument.user.avatar, :class => "user_thumb" %>
+				<br>
+				<br>
+					<%= link_to (image_tag @instrument.user.avatar), user_path, :class => "user_thumb" %>
 				  	<h2><%= @instrument.user.first_name %></h2>
 			</div>
 		</div>
@@ -24,12 +27,18 @@
 				<% if current_user == @instrument.user %>
 					Are you happy with this listing?
 					<br/>
-					<%= link_to 'Yes', instruments_path, class: "btn btn-primary" %> 
-					<%= link_to 'NO, EDIT', edit_instrument_path(@instrument), class: "btn btn-primary" %> 
+
+					<div class="link_to">
+						<%= link_to 'Yes', instruments_path, class: "btn btn-primary" %> 
+						<%= link_to 'NO, EDIT', edit_instrument_path(@instrument), class: "btn btn-primary" %> 
+					</div>
 
 				<% else %>
-					<%= link_to 'BACK TO LISTINGS', instrument_path, class: "btn btn-primary btn-large" %>
-					<%= link_to 'RENT', new_instrument_rental_path(@instrument), class: "btn btn-primary" %>
+
+					<div class="link_to">
+						<%= link_to 'RENT', new_instrument_rental_path(@instrument), class: "btn btn-primary" %>
+						<%= link_to 'BACK TO LISTINGS', instrument_path, class: "btn btn-primary" %>
+					</div>
 				<% end %>
 			
 			

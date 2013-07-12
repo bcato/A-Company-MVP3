@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130701235523) do
+ActiveRecord::Schema.define(:version => 20130710214306) do
 
   create_table "instruments", :force => true do |t|
     t.integer  "user_id"
@@ -44,18 +44,20 @@ ActiveRecord::Schema.define(:version => 20130701235523) do
   add_index "rentals", ["state"], :name => "index_rentships_on_state"
   add_index "rentals", ["user_id"], :name => "index_rentships_on_user_id_and_renter_id"
 
-  create_table "user_info", :force => true do |t|
+  create_table "ship_addy", :force => true do |t|
     t.integer  "user_id"
-    t.string   "liner"
-    t.string   "fav_I"
-    t.string   "fav_band"
-    t.string   "cur_learn"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "country"
   end
 
-  add_index "user_info", ["user_id"], :name => "index_user_info_on_user_id"
+  add_index "ship_addy", ["user_id"], :name => "index_user_info_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -77,6 +79,11 @@ ActiveRecord::Schema.define(:version => 20130701235523) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "description"
+    t.string   "liner"
+    t.string   "fav_I"
+    t.string   "fav_band"
+    t.string   "cur_learn"
+    t.string   "other"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

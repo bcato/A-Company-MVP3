@@ -16,6 +16,12 @@
 				<% else %>
 					<h3><%= @user.first_name %></h3>
 				<% end %>
+				<h5><%= @user.liner %></h5>
+					<p><%= @user.other %></p>
+					<p>Favorite instrument: <%= @user.fav_I %></p>
+					<p>Favorite band: <%= @user.fav_band %></p>
+
+					<br />
 
 	  		    <%= link_to 'Edit', edit_user_registration_path, class: "btn btn-inverse btn-large" %>
 	  		</div>
@@ -34,28 +40,55 @@
 				</tr>
 		</thead>
 					<tbody>
-						<% if @user.instrument_rentals.where(state: "requested").size > 0 %>
-							<% @user.instrument_rentals.where(state: "requested").each do |rental| %>
-								<p>
-									
-									<%= link_to rental.user.first_name, user_path(rental.user) %>
-									wants to rent
-									<%= link_to rental.instrument.name, instrument_path(rental.instrument) %>
-									from
-									<%= rental.start_on %>
-									to
-									<%= rental.end_on %>
+						<div class="row-fluid">
+							<div class="span5">
+								<h5>Requests you have received</h5>
+								<% if @user.instrument_rentals.where(state: "requested").size > 0 %>
+									<% @user.instrument_rentals.where(state: "requested").each do |rental| %>
+										<p>
+											
+											<%= link_to rental.user.first_name, user_path(rental.user) %>
+											wants to rent
+											<%= link_to rental.instrument.name, instrument_path(rental.instrument) %>
+											from you on
+											<%= rental.start_on %>
+											to
+											<%= rental.end_on %>
 
-									<%= link_to("Accept", rental_events_path(rental, event: "accept"), method: :post) %>
-									<%= link_to("Reject", rental_events_path(rental, event: "reject"), method: :post) %>
-							
-							</p>
-							<% end %>
-						<% end %>
+											<%= link_to("Accept", rental_events_path(rental, event: "accept"), method: :post) %>
+											<%= link_to("Reject", rental_events_path(rental, event: "reject"), method: :post) %>
+									
+									</p>
+									<% end %>
+								<% end %>
+							</div>
+							<div class="span5 offset1">
+								<h5>Requests you have sent</h5>
+								<% if @user.rentals.where(state: "requested").size > 0 %>
+									<% @user.rentals.where(state: "requested").each do |rental| %>
+										<p>
+											You have requested to rent 
+											<%= link_to rental.instrument.name, instrument_path(rental.instrument) %>
+											from
+											<%= link_to rental.instrument.user.first_name, user_path(rental.instrument.user) %>
+											
+											on the dates of 
+											<%= rental.start_on %>
+											to
+											<%= rental.end_on %>
+											and are waiting on a reply
+
+											<%= link_to("Cancel", rental_events_path(rental, event: "cancel"), method: :post) %>
+									
+									</p>
+									<% end %>
+								<% end %>
+							</div>
+						</div>
 					</tbody>
 	</table>
 	<table class= "table table-striped">
-				<h4>Instruments you are currently renting out</h4>
+				<h4>Current Rentals</h4>
 				<thead>
 					<tr>
 						<th></th>
@@ -65,20 +98,45 @@
 				</thead>
 
 				<tbody>
-						<% if @user.instrument_rentals.where(state: "accepted").size > 0 %>
-							<% @user.instrument_rentals.where(state: "accepted").each do |rental| %>
-								<p>
-									You've agreed to let <%= link_to rental.user.first_name, user_path(rental.user) %> rent
-									<%= link_to rental.instrument.name, instrument_path(rental.instrument) %> from
-									<%= rental.start_on %>
-									to
-									<%= rental.end_on %>
-									<%= link_to("Cancel", rental_events_path(rental, event: "cancel"), method: :post) %>
-								</p>
-				</tbody>
+					<div class="row-fluid">
+						<div class="span5">
+							<h5>Instruments you are lending</h5>
+							<% if @user.instrument_rentals.where(state: "accepted").size > 0 %>
+								<% @user.instrument_rentals.where(state: "accepted").each do |rental| %>
+									<p>
+										You've agreed to let <%= link_to rental.user.first_name, user_path(rental.user) %> 
+										rent
+										<%= link_to rental.instrument.name, instrument_path(rental.instrument) %> 
+										from you on
+										<%= rental.start_on %>
+										to
+										<%= rental.end_on %>
+										<%= link_to("Cancel", rental_events_path(rental, event: "cancel"), method: :post) %>
+									</p>
+								<% end %>
 							<% end %>
-						<% end %>
-			<% end %>
+						</div>
+						<div class="span5 offset1">
+							<h5>Instruments you are renting </h5>
+							<% if @user.rentals.where(state: "accepted").size > 0 %>
+								<% @user.rentals.where(state: "accepted").each do |rental| %>
+									<p>
+										You are currently renting
+										<%= link_to rental.instrument.name, instrument_path(rental.instrument) %>
+										from
+										 <%= link_to rental.instrument.user.first_name, user_path(rental.instrument.user) %> 
+										 from the dates of
+										<%= rental.start_on %>
+										to
+										<%= rental.end_on %>
+										<%= link_to("Cancel", rental_events_path(rental, event: "cancel"), method: :post) %>
+									</p>
+								<% end %>
+							<% end %>
+						</div>
+					</div>
+				</tbody>					
+		<% end %>
 	</table>		
 	</div>
 </div>

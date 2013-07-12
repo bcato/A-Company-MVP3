@@ -9,12 +9,16 @@
         <%= f.input :first_name %>
         <%= f.input :last_name %>
         <%= f.input :email %>
+        <%= f.input :liner, label: "One-liner" %>
+        <%= f.input :fav_I, label: "What's your favorite instrument?" %>
+        <%= f.input :fav_band, label: "What's your favorite band?" %>
+        <%= f.input :other, label: "Describe yourself", as: :text, input_html: { rows: "5", style: 'width: 20.000em'} %>
 
 
         <div class= "edit_buttons">
           <%= f.submit "Update", class: "btn btn-primary" %>
 
-          <%= link_to 'BACK TO LISTINGS', instruments_path, class: "btn btn-small" %>
+          <%= link_to 'BACK TO LISTINGS', instruments_path, class: "btn btn-primary" %>
         </div>
 
          <h3>Cancel my account</h3>
@@ -26,10 +30,9 @@
       <%= f.input :avatar, label: "Upload an image" %>
     </div>
     
-
-   
-
     <% end %>
+
+
 
   </div>
 </div>

@@ -2,7 +2,7 @@
 <div id="reservebox">
 <div class="row">
 	<div class="span6 offset1">
-				<%= image_tag @instrument.image %>
+			<%= image_tag @instrument.image %>
 		<h2>
 			<%= @instrument.name %>
 		</h2>
@@ -16,19 +16,22 @@
 		  		<%= @instrument.description %>
 			</p>
 		<hr/>
-			<%= f.submit 'Rent this Instrument', class: "btn btn-primary" %>
-			<%= link_to 'Back to instruments', instruments_path, class: "btn btn-primary" %>
-		<div class:"well">
-			<% if current_user.id == @instrument.user_id %>
-				<p>
-					Happy with it? 
-				</p>
-				<%= link_to 'Nope', edit_instrument_path(@instrument), class: "btn btn-primary" %> |
-			<% end %>
+			
+			<div class="row-fluid">
+				<div class="span3">
+					<%= f.submit 'Request to rent!', class: "btn btn-primary" %>
+				</div>
+				<div class="span3 offset1">
+					<div class="link_to">
+						<%= link_to 'Back to listings', instruments_path, class: "btn btn-primary" %>
+					</div>
+				</div>
+			</div>
 			
 		</div>
-		</div>
 		<div class="span4">
+			<h3>Pick your date range</h3>
+			<hr/>
 				<%= f.hidden_field(:user_id) %>
 				<%= f.hidden_field(:instrument_id) %>
 				<%= f.label(:start_on, "From") %>

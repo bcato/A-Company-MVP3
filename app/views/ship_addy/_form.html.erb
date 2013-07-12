@@ -1,0 +1,31 @@
+<div id="add_instrument">
+  <div class="row-fluid">
+    <div class="span6">
+
+     <%= simple_form_for(@ship_addy, html: {class: "form-vertical"}) do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :address1, label: "Address Line1", :input_html => {:style=> 'width: 20.000em'}, :placeholder => "1234 Musician's Way" %>
+      <%= f.input :address2, label: "Address Line2", :input_html => {:style=> 'width: 20.000em'}, :placeholder => "Apt. 3" %>
+
+      <%= f.input :city, label: "City", :input_html => {:style=> 'width: 20.000em'}, :placeholder => "San Franciso" %>
+
+      <%= f.input :state, label: "State", :input_html => { :as => :text, :style=>  "width: 20.000em;"}, :collection => ["CA"] %>
+    
+      <%= f.input :zip, label: "ZIP", :input_html => {:style=> 'width: 20.000em'}, :placeholder => "12345" %>
+
+      <%= f.input :country, label: "Country", :input_html => { :as => :text, :style=>  "width: 20.000em;"}, :collection => ["United States"] %>
+
+      
+        <%= f.submit "CREATE", class: "btn btn-primary btn-large" %>
+
+        <hr>
+      
+        <%= link_to 'BACK TO LISTINGS', instruments_path %>
+      
+    </div>
+    
+  </div>
+</div>
+
+   <% end %>

@@ -9,6 +9,10 @@ ClistApp::Application.routes.draw do
     resources :events, only: :create
   end
 
+  resources :rentals do
+    resources :ship_addy
+  end
+
   devise_for :users do
     get "users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
   end

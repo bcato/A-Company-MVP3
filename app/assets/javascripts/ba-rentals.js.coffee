@@ -34,6 +34,7 @@ responseCallbackHandler = (response) ->
 # FOR DEMONSTRATION PURPOSES ONLY - if you already have a server you can POST to, replace the URL with the URL to post to.
 # go to http://requestb.in/
 # click create new request bin and COPY that URL without the ?inspect at the end
+#replace the /v1/ with the Uri from balanced
  requestBinURL = "http://requestb.in/onetigon"
  marketplaceUri = "/v1/marketplaces/TEST-MP2autgNHAZxRWZs76RriOze"
  balanced.init marketplaceUri

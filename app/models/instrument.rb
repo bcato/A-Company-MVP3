@@ -11,7 +11,6 @@ class Instrument < ActiveRecord::Base
   						#size: { less_than: 5.megabytes }
 
   belongs_to :user
-  belongs_to :renter, class_name: 'User', foreign_key: 'renter_id'
             
   has_many :rentals
 
