@@ -1,0 +1,32 @@
+<div class="container">
+<form action="/users/:user_id/balanced/:id/create_balanced_account" method="POST" id="bank-account-form" class="form-horizontal">
+	<fieldset>
+		<legend>Bank Account Information</legend>
+			<label>Account Holder's Name
+				<input type="text" autocomplete="off" placeholder="Bank Account Holder's name" class="ba-name" value="Andante User">
+			</label>
+			<label>Routing Number
+				<input type="text" autocomplete="off" placeholder="Routing Number" class="ba-rn" value="121000358">
+			</label>
+			<label>Account Number
+				<input type="text" autocomplete="off" placeholder="Account Number" class="ba-an" value="9900000001">
+			</label>
+			
+			<label>Account Type
+				<select>
+					<option value='' disable selected style='display:none'>
+					Select Account Type </option>
+					
+					<option value="checking" default>CHECKING></option>
+					
+					<option value="savings">SAVINGS</option>
+				</select>
+			</label>
+
+			<button type="submit" class="btn">
+				Tokenize
+			</button>
+
+	</fieldset>
+</form>
+</div>

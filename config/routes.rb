@@ -1,22 +1,29 @@
 ClistApp::Application.routes.draw do
 
   resources :instruments do
-    resources :rentals
+    resources :rentals do
+      resources :ship_addy
   end
+end
 
   resources :rentals do
     # /rentals/:rental_id/events?event=approve
     resources :events, only: :create
   end
 
-  resources :rentals do
-    resources :ship_addy
-  end
 
   devise_for :users do
     get "users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
   end
   resources :users, :only => [:show]
+
+  resources :users do
+    resources :balanced do
+      member do
+        post :store_credit_card, :create_balanced_account
+      end
+    end
+  end
 
 
   get 'about' => 'pages#about'

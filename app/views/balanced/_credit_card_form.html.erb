@@ -1,0 +1,22 @@
+<div class="container">
+<form action="/users/:user_id/balanced/:id/store_credit_card" method="POST" id="credit-card-form" class="form-horizontal">
+	<fieldset>
+		<legend>Credit Card Details</legend>
+			<label>Card Number
+				<input type="text" autocomplete="off" placeholder="Card Number" class="cc-number">
+			</label>
+			<label>Expiration
+				<input type="text" autocomplete="off" placeholder="Expiration Month" class="cc-em">
+			<span>/</span>
+				<input type="text" autocomplete="off" placeholder="Expiration Year" class="cc-ey">
+			</label>
+			<label>Security Code (CSC)
+				<input type="text" autocomplete="off" placeholder="CSC" class="cc-csc">
+			</label>
+
+			<button type="submit" class="btn">
+				Tokenize
+			</button>
+	</fieldset>
+</form>
+</div>
