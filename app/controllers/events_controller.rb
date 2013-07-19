@@ -4,15 +4,14 @@ class EventsController < ApplicationController
 	#before_filter :ensure_owner
 
     def create
-  	    begin
-  		    @rental.fire_state_event(params[:event])
-      	rescue
-  	    	flash[:error] = "no such event"
-      	end
+    	begin
+	  	    @rental.fire_state_event(params[:event])
+	  	    @rental.save!
+  		rescue IndexError
+  			flash[:error] = "No such event."
+  		end
   	    redirect_to :back
-     end
-
-
+    end
 
     private 
 

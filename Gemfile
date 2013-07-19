@@ -15,6 +15,7 @@ gem 'jquery-ui-rails'
 gem 'noty-rails'
 gem 'will_paginate', '~> 3.0'
 #gem 'cucumber-rails'
+gem 'american_date'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,6 +27,7 @@ end
 group :development, :test do
 	gem 'sqlite3'
 	gem "rspec-rails"
+  gem "factory_girl_rails", "~> 4.0"
   	#gem "database_cleaner"
   	#gem "cucumber-rails", require: false
   	#gem "capybara-webkit"

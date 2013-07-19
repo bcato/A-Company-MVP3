@@ -3,34 +3,18 @@ require 'spec_helper'
 describe EventsController do
 	describe "#create" do
 		let(:owner) do
-			User.create!({
-				email: "guitarist@awesome.com",
-				password: "password",
-				password_confirmation: "password",
-				first_name: "Nigel",
-				last_name: "Foo"
-			})
+			FactoryGirl.create(:user)
 		end
 		let(:instrument) do
-			Instrument.create!({
-				name: "Awesome Instrument",
-				user: owner,
-				description: "something",
-				price: 35,
-				category: "Guitar"
+			FactoryGirl.create(:instrument, {
+                user: owner
 			})
 		end
 		let(:renter) do
-			User.create!({
-				email: "starving_artist@lessawesome.com",
-				password: "password",
-				password_confirmation: "password",
-				first_name: "Nigel",
-				last_name: "Bar"
-			})
+			FactoryGirl.create(:user)
 		end
 		let(:rental) do
-			Rental.create!({
+			FactoryGirl.create(:rental, {
 				instrument: instrument,
 				user: renter,
 				start_on: Date.today,
