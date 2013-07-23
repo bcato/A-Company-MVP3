@@ -28,12 +28,11 @@ class RentalsController < ApplicationController
 		@rental = current_user.rentals.build(params[:rental])
 		if @rental.save
 			flash[:success] = "Rental requested for #{@rental.instrument.name}"
-			redirect_to new_instrument_rental_path(@rental.instrument,:rental => params[:rental])
-			#redirect_to new_instrument_rental_ship_addy_path(@ship_addy.rental.instrument,:ship_addy => params[:ship_addy])
+			redirect_to :back
 		else 
-			raise params.inspect
+			#raise params.inspect
 			flash[:error] = @rental.errors.full_messages.join("\n")
-			redirect_to new_instrument_rental_path(@rental.instrument,:rental => params[:rental])
+			redirect_to :back
 		end
 	end
 

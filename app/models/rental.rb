@@ -7,61 +7,23 @@ class Rental < ActiveRecord::Base
 	attr_accessible :user, :user_id, :instrument_id, :instrument, :start_on, :end_on
 
 	#code to make sure start and end dates are correct and not duplicative
-	validates :start_on, presence: true
-	validates :end_on, presence: true
+	validates :start_on, :presence => { :message => "Please enter a valid start date" } 
+	validates :end_on, :presence => { :message => "Please enter a valid end date" } 	
 	validate :start_on_must_be_before_end_on
-	validate :availability
+	validate :start_on_must_be_after_today
+	validate :availability?
 
 	validates :instrument, presence: true
 	validates :user, presence: true
 
-	def availability
+	def availability?
 		if Rental
 			.where(instrument_id: instrument_id)
 			.where("start_on < ? AND end_on > ?", end_on, start_on)
 			.all.reject { |rental| rental == self }.present?
-			errors.add(:base, "Time frame overlaps other rentals")
+			errors.add(:base, "Oops, it seems that this instrument is unavailable in the time range that you've selected. Please choose alternate dates.")
 		end
-
-		# num_overlapping_start_on =
-		#     Rental.where("id != ?", id).where(instrument_id: instrument_id).where(
-		# 	    "start_on <= ? AND end_on >= ?",
-		# 	    start_on, start_on
-  #   		).count
-  #   	puts num_overlapping_start_on
-		# if num_overlapping_start_on > 0
-		# 	errors.add(:start_on, "overlaps another request.")
-		# end
-		# num_overlapping_end_on =
-		#     Rental.where("id != ?", id).where(instrument_id: instrument_id).where(
-		# 	    "start_on <= ? AND end_on >= ?",
-		# 	    end_on, end_on
-  #   		).count
-  #   	puts num_overlapping_end_on
-		# if num_overlapping_end_on > 0
-		# 	errors.add(:end_on, "overlaps another request.")
-		# end
 	end
-
-	#scope :overlaps, ->(start_on, end_on) do
-	#	where "((julianday(Date(start_on)) - julianday(?))) * ((julianday(Date(?)) - julianday(end_on))) >= 0", end_on, start_on
-	#end
-
-	#def overlaps?
-	#	overlaps.exists?
-	#end
-
-	#def overlaps
-	#	siblings.overlaps start_on, end_on
-	#end
-
-	#def not_overlap
-	#	errors.add(:base, 'message') if overlaps?
-	#end
-
-	#def siblings
-	#	user.rentals.where('id != ?', id || -1)
-	#end
 
 	after_create :send_request_email
 
@@ -125,6 +87,13 @@ class Rental < ActiveRecord::Base
 
 	def start_on_must_be_before_end_on
 		return unless start_on and end_on
-		errors.add(:start_on, "must be before end time") unless start_on < end_on
+		errors.add(:base, "Sorry, but you must choose a end date that occurs after your desired start date") unless
+			start_on < end_on
 	end
+
+	def start_on_must_be_after_today
+		errors.add(:base, "Sorry, but you must choose a start date that occurs at least 3 days after today") if
+			!start_on.blank? and start_on < Date.today + 3
+	end
+
 end

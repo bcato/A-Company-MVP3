@@ -11,6 +11,7 @@ class EventsController < ApplicationController
   			flash[:error] = "No such event."
   		end
   	    redirect_to :back
+  	    #new_instrument_rental_ship_addy_path(@ship_addy.rental.instrument,:ship_addy => params[:ship_addy])
     end
 
     private 

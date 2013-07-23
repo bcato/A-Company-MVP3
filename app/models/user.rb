@@ -31,5 +31,5 @@ class User < ActiveRecord::Base
   has_many :rentals
   has_many :instrument_rentals, through: :instruments, source: :rentals
 
-  #has_many :ship_addy
+  
 end
